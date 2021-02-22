@@ -1,7 +1,7 @@
 {
     "Core": true,
-    "AccessLevel": true,
-    "Users": true,
+    "Investments": true,
     "Payments": true,
-    "Investments": true
+    "Users": true,
+    "Dashboard": true
 }

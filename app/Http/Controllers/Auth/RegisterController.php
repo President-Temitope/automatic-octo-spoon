@@ -8,6 +8,11 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Spatie\Permission\Models\Role;
+
+/*use Murich\PhpCryptocurrencyAddressValidation\Validation\BTC as BTCValidator;
+use Murich\PhpCryptocurrencyAddressValidation\Validation\ETH as ETHValidator;
+use Murich\PhpCryptocurrencyAddressValidation\Validation\LTC as LTCValidator;*/
 
 class RegisterController extends Controller
 {
@@ -53,6 +58,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'cryptocurrency' => ['required','string'],
+            'wallet_address' => ['required','string','min:26','max:35']
         ]);
     }
 
@@ -64,10 +71,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        $user = User::create([
+        'name' => $data['name'],
+        'email' => $data['email'],
+        'password' => Hash::make($data['password']),
+        'cryptocurrency' => $data['cryptocurrency'],
+        'wallet_address' => $data['wallet_address']
+    ]);
+       // $role = Role::create(['name' => 'user']);
+        $user->assignRole('user');
+        return $user;
     }
 }

@@ -133,7 +133,7 @@
                             <p>We are here because we are passionate about open, transparent markets and aim to be a major driving force in widespread adoption, we are the first and the best in cryptocurrency. </p>
                         </div>
                     </div>
-                    <a class="btn btn-primary" href="about.html">Read More</a>
+{{--                    <a class="btn btn-primary" href="{{route('about')}}">Read More</a>--}}
                 </div>
                 <!-- Content Ends -->
             </div>
@@ -240,6 +240,7 @@
         </div>
     </section>
     <!-- Features and Video Section Ends -->
+    @auth
     <!-- Pricing Starts -->
     <section class="pricing">
         <div class="container">
@@ -403,6 +404,7 @@
         </div>
     </section>
     <!-- Pricing Ends -->
+    @endauth
     <!-- Bitcoin Calculator Section Starts -->
     <section class="bitcoin-calculator-section">
         <div class="container">

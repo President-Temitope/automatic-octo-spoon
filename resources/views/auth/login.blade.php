@@ -204,7 +204,8 @@
                     </div>
                     <!-- Section Title Ends -->
                     <!-- Form Starts -->
-                    <form>
+                    <form method="POST" action="{{ route('login') }}">
+                    @csrf
 
                         <!-- Input Field Ends -->
                         <!-- Input Field Starts -->

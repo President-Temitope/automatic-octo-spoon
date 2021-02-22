@@ -247,6 +247,30 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror </div>
+
+                        <div class="form-group">
+                            <select id="cryptocurrency" class="form-control @error('cryptocurrency') is-invalid @enderror" name="cryptocurrency" required>
+                                <option value="btc" selected>Bitcoin</option>
+                                <option value="ltc">Litecoin</option>
+                                <option value="eth">Ethereum</option>
+                            </select>
+
+                            @error('cryptocurrency')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror </div>
+
+                        <!-- Input Field Starts -->
+                        <div class="form-group">
+                            <input id="wallet_address" placeholder="Wallet address" type="text" class="form-control @error('wallet_address') is-invalid @enderror" name="wallet_address" required autocomplete="wallet_address">
+
+                            @error('wallet_address')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror </div>
+
                         <!-- Input Field Ends -->
                         <!-- Submit Form Button Starts -->
                         <div class="form-group">

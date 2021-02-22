@@ -4,6 +4,8 @@ namespace Modules\Investments\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\Investments\Interfaces\InvestmentsRepositoryInterface;
+use Modules\Investments\Repositories\InvestmentsRepository;
 
 class InvestmentsServiceProvider extends ServiceProvider
 {
@@ -38,6 +40,7 @@ class InvestmentsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+        $this->app->bind(InvestmentsRepositoryInterface::class,InvestmentsRepository::class);
     }
 
     /**
