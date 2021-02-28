@@ -19,6 +19,7 @@ class CreateInvestmentTable extends Migration
             $table->string('price');
             $table->float('proposed_amount');
             $table->boolean('status')->default(true);
+            $table->timestamps();
         });
     }
 

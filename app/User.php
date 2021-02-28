@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','wallet_address','cryptocurrency'
+        'firstname', 'email', 'password','wallet_address','cryptocurrency','lastname'
     ];
 
     /**
@@ -39,4 +39,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function fullName(){
+        return $this->firstname .' '. $this->lastname;
+    }
 }

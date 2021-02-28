@@ -78,9 +78,9 @@
 <html lang="en">
 <head>
 
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Register - {{config('app.name')}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('images/Asset 16@4x.png')}}">
@@ -107,7 +107,8 @@
 <!-- SVG Preloader Starts -->
 <div id="preloader">
     <div id="preloader-content">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="150px" viewBox="100 100 400 400" xml:space="preserve">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150px" height="150px"
+             viewBox="100 100 400 400" xml:space="preserve">
                 <filter id="dropshadow" height="130%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
                     <feOffset dx="0" dy="0" result="offsetblur"/>
@@ -129,7 +130,7 @@
                     C327.767,212.14,389.234,221.02,379.302,260.846z"/>
             </svg>
 
-{{--        <img src="{{asset('images/Asset 11@4x.png')}}" class="img-responsive img-rounded"/>--}}
+        {{--        <img src="{{asset('images/Asset 11@4x.png')}}" class="img-responsive img-rounded"/>--}}
     </div>
 </div>
 <!-- SVG Preloader Ends -->
@@ -158,7 +159,8 @@
                     <div class="item active item-1">
                         <div>
                             <blockquote>
-                                <p>This is a realistic program for anyone looking for site to invest. Paid to me regularly, keep up good work!</p>
+                                <p>This is a realistic program for anyone looking for site to invest. Paid to me
+                                    regularly, keep up good work!</p>
                                 <footer><span>Lucy Smith</span>, England</footer>
                             </blockquote>
                         </div>
@@ -168,7 +170,8 @@
                     <div class="item item-2">
                         <div>
                             <blockquote>
-                                <p>Bitcoin doubled in 7 days. You should not expect anything more. Excellent customer service!</p>
+                                <p>Bitcoin doubled in 7 days. You should not expect anything more. Excellent customer
+                                    service!</p>
                                 <footer><span>Slim Hamdi</span>, Tunisia</footer>
                             </blockquote>
                         </div>
@@ -178,7 +181,8 @@
                     <div class="item item-3">
                         <div>
                             <blockquote>
-                                <p>My family and me want to thank you for helping us find a great opportunity to make money online. Very happy with how things are going!</p>
+                                <p>My family and me want to thank you for helping us find a great opportunity to make
+                                    money online. Very happy with how things are going!</p>
                                 <footer><span>Dalel Boubaker</span>, Russia</footer>
                             </blockquote>
                         </div>
@@ -204,14 +208,16 @@
                     </div>
                     <!-- Section Title Ends -->
                     <!-- Form Starts -->
-                    <form>
-
-                        <!-- Input Field Ends -->
+                    <form method="POST" action="{{route('register')}}">
+                    @csrf
+                    <!-- Input Field Ends -->
                         <!-- Input Field Starts -->
                         <div class="form-group">
-                            <input id="name" type="text" placeholder="Name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                            <input id="firstname" type="text" placeholder="Firstname"
+                                   class="form-control @error('firstname') is-invalid @enderror" name="firstname"
+                                   value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
 
-                            @error('name')
+                            @error('firstname')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -219,7 +225,21 @@
                         <!-- Input Field Ends -->
                         <!-- Input Field Starts -->
                         <div class="form-group">
-                            <input id="email" placeholder="Email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <input id="lastname" type="text" placeholder="Lastname"
+                                   class="form-control @error('lastname') is-invalid @enderror" name="lastname"
+                                   value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
+
+                            @error('lastname')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror</div>
+                        <!-- Input Field Ends -->
+                        <!-- Input Field Starts -->
+                        <div class="form-group">
+                            <input id="email" placeholder="Email" type="email"
+                                   class="form-control @error('email') is-invalid @enderror" name="email"
+                                   value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                             @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -229,7 +249,9 @@
                         <!-- Input Field Ends -->
                         <!-- Input Field Starts -->
                         <div class="form-group">
-                            <input id="password" placeholder="Password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <input id="password" placeholder="Password" type="password"
+                                   class="form-control @error('password') is-invalid @enderror" name="password" required
+                                   autocomplete="current-password">
 
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -240,7 +262,9 @@
 
                         <!-- Input Field Starts -->
                         <div class="form-group">
-                            <input id="password" placeholder="Confirm password" type="password" class="form-control @error('password-confirm') is-invalid @enderror" name="password_confirmation" required autocomplete="current-password">
+                            <input id="password" placeholder="Confirm password" type="password"
+                                   class="form-control @error('password-confirm') is-invalid @enderror"
+                                   name="password_confirmation" required autocomplete="current-password">
 
                             @error('password-confirm')
                             <span class="invalid-feedback" role="alert">
@@ -249,7 +273,9 @@
                             @enderror </div>
 
                         <div class="form-group">
-                            <select id="cryptocurrency" class="form-control @error('cryptocurrency') is-invalid @enderror" name="cryptocurrency" required>
+                            <select id="cryptocurrency"
+                                    class="form-control @error('cryptocurrency') is-invalid @enderror"
+                                    name="cryptocurrency" required>
                                 <option value="btc" selected>Bitcoin</option>
                                 <option value="ltc">Litecoin</option>
                                 <option value="eth">Ethereum</option>
@@ -263,7 +289,9 @@
 
                         <!-- Input Field Starts -->
                         <div class="form-group">
-                            <input id="wallet_address" placeholder="Wallet address" type="text" class="form-control @error('wallet_address') is-invalid @enderror" name="wallet_address" required autocomplete="wallet_address">
+                            <input id="wallet_address" placeholder="Wallet address" type="text"
+                                   class="form-control @error('wallet_address') is-invalid @enderror"
+                                   name="wallet_address" required autocomplete="wallet_address">
 
                             @error('wallet_address')
                             <span class="invalid-feedback" role="alert">
@@ -277,7 +305,7 @@
                             <button class="btn btn-primary" type="submit">Register</button>
                             <p class="text-center"> have an account ? <a href="{{route('login')}}">Login</a>
                             <p class="text-center">forgot password ? click <a href="{{ route('password.request') }}">here</a>
-{{--                            <p class="text-center">don't have an account ? <a href="{{route('register')}}">Register</a>--}}
+                            {{--                            <p class="text-center">don't have an account ? <a href="{{route('register')}}">Register</a>--}}
                         </div>
 
                         <!-- Submit Form Button Ends -->

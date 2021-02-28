@@ -32,7 +32,8 @@
                     <div class="col-md-12">
                         <div class="container">
                             <div class="slider-text text-center">
-                                <h3 class="slide-title"><span>Bitcoin</span> Exchange <br/>You can <span>Trust</span> </h3>
+                                <h3 class="slide-title"><span>Bitcoin</span> Exchange <br/>You can <span>Trust</span>
+                                </h3>
                                 <p>
                                     <a href="pricing.html" class="slider btn btn-primary">our prices</a>
                                 </p>
@@ -116,7 +117,22 @@
                 <!-- Content Starts -->
                 <div class="col-sm-12 col-md-7 col-lg-6">
                     <h3 class="title-about">WE ARE {{config('app.name')}}</h3>
-                    <p class="about-text">A place for everyone who wants to simply buy and sell Bitcoins. Deposit funds using your Visa/MasterCard or bank transfer. Instant buy/sell of Bitcoins at fair price is guaranteed. Nothing extra. Join over 700,000 users from all over the world satisfied with our services.</p>
+                    <p class="about-text">A place for everyone who wants to simply mine and earn Bitcoins . Autominer is
+                        a global cloud mining platform that offers hash power to mine cryptocurrencies .our team has
+                        been working in crypto currency mining field since the begining of 2016. Our platform
+                        specializes in providing integrated solutions for mining ,including direct equipment supply,
+                        service and repair, warranty service and best mining equipment such as :Antiminer S9
+                        Antiminier L3+
+                        whatsminer M3x
+                        AntMiner D3
+                        to extract automatic payout to investors wallet address ..
+                        With our aim to purchase and host our own mining equipment operations . to provide service
+                        maintenance for that purpose we found our own main site in the city of australia and usa ,built
+                        all required mining infrastructure .A team of professional miners was aasembled to monitor
+                        eqiupment oeprtations to provide adequate service maintainance ,we have over 500,000 users from
+                        all over the world satisfied with our services!
+                        Through our experience technological services experience how, autominer earned the trust of
+                        investors around the world!</p>
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#menu1">Our Mission</a></li>
                         <li><a data-toggle="tab" href="#menu2">Our advantages</a></li>
@@ -124,16 +140,20 @@
                     </ul>
                     <div class="tab-content">
                         <div id="menu1" class="tab-pane fade in active">
-                            <p>Bitcoin is based on a protocol known as the blockchain, which allows to create, transfer and verify ultra-secure financial data without interference of third parties.</p>
+                            <p>Bitcoin is based on a protocol known as the blockchain, which allows to create, transfer
+                                and verify ultra-secure financial data without interference of third parties.</p>
                         </div>
                         <div id="menu2" class="tab-pane fade">
-                            <p>Our mission as an official partner of Bitcoin Foundation is to help you enter and better understand the world of #1 cryptocurrency and avoid any issues you may encounter.</p>
+                            <p>Our mission as an official partner of Bitcoin Foundation is to help you enter and better
+                                understand the world of #1 cryptocurrency and avoid any issues you may encounter.</p>
                         </div>
                         <div id="menu3" class="tab-pane fade">
-                            <p>We are here because we are passionate about open, transparent markets and aim to be a major driving force in widespread adoption, we are the first and the best in cryptocurrency. </p>
+                            <p>We are here because we are passionate about open, transparent markets and aim to be a
+                                major driving force in widespread adoption, we are the first and the best in
+                                cryptocurrency. </p>
                         </div>
                     </div>
-{{--                    <a class="btn btn-primary" href="{{route('about')}}">Read More</a>--}}
+                    {{--                    <a class="btn btn-primary" href="{{route('about')}}">Read More</a>--}}
                 </div>
                 <!-- Content Ends -->
             </div>
@@ -153,7 +173,8 @@
                         <div class="col-sm-6 col-md-6 col-xs-12">
                             <div class="feature text-center">
                                     <span class="feature-icon">
-										<img id="strong-security" src="images/icons/orange/strong-security.png" alt="strong security"/>
+										<img id="strong-security" src="images/icons/orange/strong-security.png"
+                                             alt="strong security"/>
 									</span>
                                 <h3 class="feature-title">Strong Security</h3>
                                 <p>Protection against DDoS attacks, <br>full data encryption</p>
@@ -165,7 +186,8 @@
                         <div class="col-sm-6 col-md-6 col-xs-12">
                             <div class="feature text-center">
                                     <span class="feature-icon">
-										<img id="world-coverage" src="images/icons/orange/world-coverage.png" alt="world coverage"/>
+										<img id="world-coverage" src="images/icons/orange/world-coverage.png"
+                                             alt="world coverage"/>
 									</span>
                                 <h3 class="feature-title">World Coverage</h3>
                                 <p>Providing services in 99% countries<br> around all the globe</p>
@@ -179,10 +201,11 @@
                         <div class="col-sm-6 col-md-6 col-xs-12">
                             <div class="feature text-center">
                                     <span class="feature-icon">
-										<img id="payment-options" src="images/icons/orange/payment-options.png" alt="payment options"/>
+										<img id="payment-options" src="images/icons/orange/payment-options.png"
+                                             alt="payment options"/>
 									</span>
                                 <h3 class="feature-title">Payment Options</h3>
-                                <p>Popular methods: Visa, MasterCard, <br>bank transfer, cryptocurrency</p>
+                                <p>Popular methods: Bitcoin <br>LiteCoin, Ethereum</p>
                             </div>
                         </div>
                         <!-- Feature Ends -->
@@ -194,7 +217,7 @@
 										<img id="mobile-app" src="images/icons/orange/mobile-app.png" alt="mobile app"/>
 									</span>
                                 <h3 class="feature-title">Mobile App</h3>
-                                <p>Trading via our Mobile App, Available<br> in Play Store & App Store</p>
+                                <p>Coming Soon</p>
                             </div>
                         </div>
                         <!-- Feature Ends -->
@@ -205,10 +228,11 @@
                         <div class="col-sm-6 col-md-6 col-xs-12">
                             <div class="feature text-center">
                                     <span class="feature-icon">
-										<img id="cost-efficiency" src="images/icons/orange/cost-efficiency.png" alt="cost efficiency"/>
+										<img id="cost-efficiency" src="images/icons/orange/cost-efficiency.png"
+                                             alt="cost efficiency"/>
 									</span>
                                 <h3 class="feature-title">Cost efficiency</h3>
-                                <p>Reasonable trading fees for takers<br> and all market makers</p>
+                                {{--                                <p>Reasonable trading fees for takers<br> and all market makers</p>--}}
                             </div>
                         </div>
                         <!-- Feature Ends -->
@@ -217,10 +241,11 @@
                         <div class="col-sm-6 col-md-6 col-xs-12">
                             <div class="feature text-center">
                                     <span class="feature-icon">
-										<img id="high-liquidity" src="images/icons/orange/high-liquidity.png" alt="high liquidity"/>
+										<img id="high-liquidity" src="images/icons/orange/high-liquidity.png"
+                                             alt="high liquidity"/>
 									</span>
-                                <h3 class="feature-title">High Liquidity</h3>
-                                <p>Fast access to high liquidity orderbook<br> for top currency pairs</p>
+                                <h3 class="feature-title">High Profit Margin</h3>
+                                {{--                                <p>Fast access to high liquidity orderbook<br> for top currency pairs</p>--}}
                             </div>
                         </div>
                         <!-- Feature Ends -->
@@ -241,169 +266,169 @@
     </section>
     <!-- Features and Video Section Ends -->
     @auth
-    <!-- Pricing Starts -->
-    <section class="pricing">
-        <div class="container">
-            <!-- Section Title Starts -->
-            <div class="row text-center">
-                <h2 class="title-head">affordable <span>packages</span></h2>
-                <div class="title-head-subtitle">
-                    <p>Purchase Bitcoin using a credit card or with your linked bank account</p>
-                </div>
-            </div>
-            <!-- Section Title Ends -->
-            <!-- Section Content Starts -->
-            <div class="row pricing-tables-content">
-                <div class="pricing-container">
-                    <!-- Pricing Switcher Starts -->
-                    <div class="pricing-switcher">
-                        <p>
-                            <input type="radio" name="switch" value="buy" id="buy-1" checked>
-                            <label for="buy-1">BUY</label>
-                            <input type="radio" name="switch" value="sell" id="sell-1">
-                            <label for="sell-1">SELL</label>
-                            <span class="switch"></span>
-                        </p>
+        <!-- Pricing Starts -->
+        <section class="pricing">
+            <div class="container">
+                <!-- Section Title Starts -->
+                <div class="row text-center">
+                    <h2 class="title-head">Our <span>plans</span></h2>
+                    <div class="title-head-subtitle">
+                        <p>..............</p>
                     </div>
-                    <!-- Pricing Switcher Ends -->
-                    <!-- Pricing Tables Starts -->
-                    <ul class="pricing-list bounce-invert">
-                        <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <ul class="pricing-wrapper">
-                                <!-- Buy Pricing Table #1 Starts -->
-                                <li data-type="buy" class="is-visible">
-                                    <header class="pricing-header">
-                                        <h2>GET 0.007 BTC <span>For </span></h2>
-                                        <div class="price">
-                                            <span class="currency"><i class="fa fa-dollar"></i></span>
-                                            <span class="value">100</span>
-                                        </div>
-                                    </header>
-                                    <footer class="pricing-footer">
-                                        <a href="#" class="btn btn-primary">ORDER NOW</a>
-                                    </footer>
-                                </li>
-                                <!-- Buy Pricing Table #1 Ends -->
-                                <!-- Sell Pricing Table #1 Starts -->
-                                <li data-type="sell" class="is-hidden">
-                                    <header class="pricing-header">
-                                        <h2>GET 100 USD <span>For </span></h2>
+                </div>
+                <!-- Section Title Ends -->
+                <!-- Section Content Starts -->
+                <div class="row pricing-tables-content">
+                    <div class="pricing-container">
+                        <!-- Pricing Switcher Starts -->
+                        <div class="pricing-switcher">
+                            <p>
+                                <input type="radio" name="switch" value="buy" id="buy-1" checked>
+                                <label for="buy-1">BUY</label>
+                                {{--<input type="radio" name="switch" value="sell" id="sell-1">
+                                <label for="sell-1">SELL</label>
+                                <span class="switch"></span>--}}
+                            </p>
+                        </div>
+                        <!-- Pricing Switcher Ends -->
+                        <!-- Pricing Tables Starts -->
+                        <ul class="pricing-list bounce-invert">
+                            <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <ul class="pricing-wrapper">
+                                    <!-- Buy Pricing Table #1 Starts -->
+                                    <li data-type="buy" class="is-visible">
+                                        <header class="pricing-header">
+                                            <h2>GET 0.007 BTC <span>For </span></h2>
+                                            <div class="price">
+                                                <span class="currency"><i class="fa fa-dollar"></i></span>
+                                                <span class="value">100</span>
+                                            </div>
+                                        </header>
+                                        <footer class="pricing-footer">
+                                            <a href="#" class="btn btn-primary">ORDER NOW</a>
+                                        </footer>
+                                    </li>
+                                    <!-- Buy Pricing Table #1 Ends -->
+                                    <!-- Sell Pricing Table #1 Starts -->
+                                {{--                                <li data-type="sell" class="is-hidden">--}}
+                                {{--                                    <header class="pricing-header">--}}
+                                {{--                                        <h2>GET 100 USD <span>For </span></h2>--}}
 
-                                        <div class="price">
-                                            <span class="currency"><i class="fa fa-bitcoin"></i></span>
-                                            <span class="value">0.2</span>
-                                        </div>
-                                    </header>
-                                    <footer class="pricing-footer">
-                                        <a href="#" class="btn btn-primary">ORDER NOW</a>
-                                    </footer>
-                                </li>
+                                {{--                                        <div class="price">--}}
+                                {{--                                            <span class="currency"><i class="fa fa-bitcoin"></i></span>--}}
+                                {{--                                            <span class="value">0.2</span>--}}
+                                {{--                                        </div>--}}
+                                {{--                                    </header>--}}
+                                {{--                                    <footer class="pricing-footer">--}}
+                                {{--                                        <a href="#" class="btn btn-primary">ORDER NOW</a>--}}
+                                {{--                                    </footer>--}}
+                                {{--                                </li>--}}
                                 <!-- Sell Pricing Table #1 Ends -->
-                            </ul>
-                        </li>
-                        <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <ul class="pricing-wrapper">
-                                <!-- Buy Pricing Table #2 Starts -->
-                                <li data-type="buy" class="is-visible">
-                                    <header class="pricing-header">
-                                        <h2>GET 0.015 BTC <span>For </span></h2>
-                                        <div class="price">
-                                            <span class="currency"><i class="fa fa-dollar"></i></span>
-                                            <span class="value">300</span>
-                                        </div>
-                                    </header>
-                                    <footer class="pricing-footer">
-                                        <a href="#" class="btn btn-primary">ORDER NOW</a>
-                                    </footer>
-                                </li>
-                                <!-- Buy Pricing Table #2 Ends -->
-                                <!-- Sell Pricing Table #2 Starts -->
-                                <li data-type="sell" class="is-hidden">
-                                    <header class="pricing-header">
-                                        <h2>GET 1000 USD <span>For </span></h2>
-                                        <div class="price">
-                                            <span class="currency"><i class="fa fa-bitcoin"></i></span>
-                                            <span class="value">0.5</span>
-                                        </div>
-                                    </header>
-                                    <footer class="pricing-footer">
-                                        <a href="#" class="btn btn-primary">ORDER NOW</a>
-                                    </footer>
-                                </li>
+                                </ul>
+                            </li>
+                            <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <ul class="pricing-wrapper">
+                                    <!-- Buy Pricing Table #2 Starts -->
+                                    <li data-type="buy" class="is-visible">
+                                        <header class="pricing-header">
+                                            <h2>GET 0.015 BTC <span>For </span></h2>
+                                            <div class="price">
+                                                <span class="currency"><i class="fa fa-dollar"></i></span>
+                                                <span class="value">300</span>
+                                            </div>
+                                        </header>
+                                        <footer class="pricing-footer">
+                                            <a href="#" class="btn btn-primary">ORDER NOW</a>
+                                        </footer>
+                                    </li>
+                                    <!-- Buy Pricing Table #2 Ends -->
+                                    <!-- Sell Pricing Table #2 Starts -->
+                                {{--                                <li data-type="sell" class="is-hidden">--}}
+                                {{--                                    <header class="pricing-header">--}}
+                                {{--                                        <h2>GET 1000 USD <span>For </span></h2>--}}
+                                {{--                                        <div class="price">--}}
+                                {{--                                            <span class="currency"><i class="fa fa-bitcoin"></i></span>--}}
+                                {{--                                            <span class="value">0.5</span>--}}
+                                {{--                                        </div>--}}
+                                {{--                                    </header>--}}
+                                {{--                                    <footer class="pricing-footer">--}}
+                                {{--                                        <a href="#" class="btn btn-primary">ORDER NOW</a>--}}
+                                {{--                                    </footer>--}}
+                                {{--                                </li>--}}
                                 <!-- Sell Pricing Table #2 Ends -->
-                            </ul>
-                        </li>
-                        <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <ul class="pricing-wrapper">
-                                <!-- Buy Pricing Table #3 Starts -->
-                                <li data-type="buy" class="is-visible">
-                                    <header class="pricing-header">
-                                        <h2>GET 0.031 BTC <span>For </span></h2>
-                                        <div class="price">
-                                            <span class="currency"><i class="fa fa-dollar"></i></span>
-                                            <span class="value">500</span>
-                                        </div>
-                                    </header>
-                                    <footer class="pricing-footer">
-                                        <a href="#" class="btn btn-primary">ORDER NOW</a>
-                                    </footer>
-                                </li>
-                                <!-- Buy Pricing Table #3 Ends -->
-                                <!-- Yearlt Pricing Table #3 Starts -->
-                                <li data-type="sell" class="is-hidden">
-                                    <header class="pricing-header">
-                                        <h2>GET 3000 USD <span>For </span></h2>
+                                </ul>
+                            </li>
+                            <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <ul class="pricing-wrapper">
+                                    <!-- Buy Pricing Table #3 Starts -->
+                                    <li data-type="buy" class="is-visible">
+                                        <header class="pricing-header">
+                                            <h2>GET 0.031 BTC <span>For </span></h2>
+                                            <div class="price">
+                                                <span class="currency"><i class="fa fa-dollar"></i></span>
+                                                <span class="value">500</span>
+                                            </div>
+                                        </header>
+                                        <footer class="pricing-footer">
+                                            <a href="#" class="btn btn-primary">ORDER NOW</a>
+                                        </footer>
+                                    </li>
+                                    <!-- Buy Pricing Table #3 Ends -->
+                                    <!-- Yearlt Pricing Table #3 Starts -->
+                                    <li data-type="sell" class="is-hidden">
+                                        <header class="pricing-header">
+                                            <h2>GET 3000 USD <span>For </span></h2>
 
-                                        <div class="price">
-                                            <span class="currency"><i class="fa fa-bitcoin"></i></span>
-                                            <span class="value">1</span>
-                                        </div>
-                                    </header>
-                                    <footer class="pricing-footer">
-                                        <a href="#" class="btn btn-primary">ORDER NOW</a>
-                                    </footer>
-                                </li>
-                                <!-- Sell Pricing Table #3 Ends -->
-                            </ul>
-                        </li>
-                        <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <ul class="pricing-wrapper">
-                                <!-- Buy Pricing Table #4 Starts -->
-                                <li data-type="buy" class="is-visible">
-                                    <header class="pricing-header">
-                                        <h2>GET 0.081 BTC <span>For </span></h2>
-                                        <div class="price">
-                                            <span class="currency"><i class="fa fa-dollar"></i></span>
-                                            <span class="value">1,000</span>
-                                        </div>
-                                    </header>
-                                    <footer class="pricing-footer">
-                                        <a href="#" class="btn btn-primary">ORDER NOW</a>
-                                    </footer>
-                                </li>
-                                <!-- Buy Pricing Table #4 Ends -->
-                                <!-- Sell Pricing Table #4 Starts -->
-                                <li data-type="sell" class="is-hidden">
-                                    <header class="pricing-header">
-                                        <h2>GET 9000 USD <span>For </span></h2>
-                                        <div class="price">
-                                            <span class="currency"><i class="fa fa-bitcoin"></i></span>
-                                            <span class="value">2</span>
-                                        </div>
-                                    </header>
-                                    <footer class="pricing-footer">
-                                        <a href="#" class="btn btn-primary">ORDER NOW</a>
-                                    </footer>
-                                </li>
-                                <!-- Sell Pricing Table #4 Ends -->
-                            </ul>
-                        </li>
-                    </ul>
+                                            <div class="price">
+                                                <span class="currency"><i class="fa fa-bitcoin"></i></span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </header>
+                                        <footer class="pricing-footer">
+                                            <a href="#" class="btn btn-primary">ORDER NOW</a>
+                                        </footer>
+                                    </li>
+                                    <!-- Sell Pricing Table #3 Ends -->
+                                </ul>
+                            </li>
+                            {{--                        <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">--}}
+                            {{--                            <ul class="pricing-wrapper">--}}
+                            {{--                                <!-- Buy Pricing Table #4 Starts -->--}}
+                            {{--                                <li data-type="buy" class="is-visible">--}}
+                            {{--                                    <header class="pricing-header">--}}
+                            {{--                                        <h2>GET 0.081 BTC <span>For </span></h2>--}}
+                            {{--                                        <div class="price">--}}
+                            {{--                                            <span class="currency"><i class="fa fa-dollar"></i></span>--}}
+                            {{--                                            <span class="value">1,000</span>--}}
+                            {{--                                        </div>--}}
+                            {{--                                    </header>--}}
+                            {{--                                    <footer class="pricing-footer">--}}
+                            {{--                                        <a href="#" class="btn btn-primary">ORDER NOW</a>--}}
+                            {{--                                    </footer>--}}
+                            {{--                                </li>--}}
+                            {{--                                <!-- Buy Pricing Table #4 Ends -->--}}
+                            {{--                                <!-- Sell Pricing Table #4 Starts -->--}}
+                            {{--                                <li data-type="sell" class="is-hidden">--}}
+                            {{--                                    <header class="pricing-header">--}}
+                            {{--                                        <h2>GET 9000 USD <span>For </span></h2>--}}
+                            {{--                                        <div class="price">--}}
+                            {{--                                            <span class="currency"><i class="fa fa-bitcoin"></i></span>--}}
+                            {{--                                            <span class="value">2</span>--}}
+                            {{--                                        </div>--}}
+                            {{--                                    </header>--}}
+                            {{--                                    <footer class="pricing-footer">--}}
+                            {{--                                        <a href="#" class="btn btn-primary">ORDER NOW</a>--}}
+                            {{--                                    </footer>--}}
+                            {{--                                </li>--}}
+                            {{--                                <!-- Sell Pricing Table #4 Ends -->--}}
+                            {{--                            </ul>--}}
+                            {{--                        </li>--}}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Pricing Ends -->
+        </section>
+        <!-- Pricing Ends -->
     @endauth
     <!-- Bitcoin Calculator Section Starts -->
     <section class="bitcoin-calculator-section">
@@ -428,7 +453,9 @@
                         <!-- Input/Result Ends -->
                         <!-- Select Currency Starts -->
                         <div class="form-wrap">
-                            <select id="currency-select" class="form-input select-currency select-primary" name="btc-calculator-currency" data-dropdown-class="select-primary-dropdown"></select>
+                            <select id="currency-select" class="form-input select-currency select-primary"
+                                    name="btc-calculator-currency"
+                                    data-dropdown-class="select-primary-dropdown"></select>
                         </div>
                         <!-- Select Currency Ends -->
                     </form>
@@ -569,8 +596,11 @@
                 <!-- Quote Starts -->
                 <div class="col-md-4 img-block-quote bg-image-2">
                     <blockquote>
-                        <p>Bitcoin is one of the most important inventions in all of human history. For the first time ever, anyone can send or receive any amount of money with anyone else, anywhere on the planet, conveniently and without restriction. It’s the dawn of a better, more free world.</p>
-                        <footer><img src="images/ceo.jpg" alt="ceo" /> <span>Marc Smith</span> - CEO</footer>
+                        <p>Bitcoin is one of the most important inventions in all of human history. For the first time
+                            ever, anyone can send or receive any amount of money with anyone else, anywhere on the
+                            planet, conveniently and without restriction. It’s the dawn of a better, more free
+                            world.</p>
+                        <footer><img src="images/ceo.jpg" alt="ceo"/> <span>Marc Smith</span> - CEO</footer>
                     </blockquote>
                 </div>
                 <!-- Quote Ends -->

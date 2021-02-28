@@ -20,7 +20,8 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                   @auth <li><a href="">Plans</a></li>@endauth
+                    @auth
+                        <li><a href="">Plans</a></li>@endauth
                     {{--<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">pages <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
@@ -36,41 +37,43 @@
                         </ul>
                     </li>--}}
                     <li><a href="contact.html">Contact</a></li>
-                        @guest
+                    @guest
+                        <li>
+                            <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @if (Route::has('register'))
                             <li>
-                                <a  href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li >
-                                    <a  href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                        <ul class="dropdown-menu" role="menu">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                        @endif
+                    @else
 
-                                <li class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->fullName() }} <i
+                                    class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                          style="display: none;">
                                         @csrf
                                     </form>
                                 </li>
+
+
+                                @endguest
                             </ul>
-                        @endguest
-                    </ul>
-                    <!-- Cart Icon Starts -->
-{{--                    <li class="cart"><a href="shopping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>--}}
-                    <!-- Cart Icon Starts -->
-                    <!-- Search Icon Starts -->
-                    <!--  <li class="search"><button class="fa fa-search"></button></li>
-                   Search Icon Ends -->
+                            <!-- Cart Icon Starts -->
+                        {{--                    <li class="cart"><a href="shopping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>--}}
+                        <!-- Cart Icon Starts -->
+                            <!-- Search Icon Starts -->
+                            <!--  <li class="search"><button class="fa fa-search"></button></li>
+                           Search Icon Ends -->
                 </ul>
                 <!-- Main Menu Ends -->
             </div>
