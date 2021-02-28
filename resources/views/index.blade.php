@@ -55,7 +55,7 @@
     </div>
     <!-- Slider Ends -->
     <!-- Features Section Starts -->
-    <section class="features">
+    {{--<section class="features">
         <div class="container">
             <div class="row features-row">
                 <!-- Feature Box Starts -->
@@ -93,7 +93,7 @@
                 <!-- Feature Box Ends -->
             </div>
         </div>
-    </section>
+    </section>--}}
     <!-- Features Section Ends -->
     <!-- About Section Starts -->
     <section class="about-us">
