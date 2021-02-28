@@ -4,7 +4,7 @@
         <div class="site-nav-inner">
             <!-- Logo For ONLY Mobile display Starts -->
             <a class="logo-mobile" href="/">
-                <img id="logo-mobile" class="img-responsive" src="{{asset('images/logo.png')}}" alt="">
+                <img id="logo-mobile" class="img-responsive" src="{{asset('images/logo.png')}}" width="40%" alt="">
             </a>
             <!-- Logo For ONLY Mobile display Ends -->
             <!-- Toggle Icon for Mobile Starts -->
@@ -36,6 +36,35 @@
                         </ul>
                     </li>--}}
                     <li><a href="contact.html">Contact</a></li>
+                        @guest
+                            <li>
+                                <a  href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li >
+                                    <a  href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                        <ul class="dropdown-menu" role="menu">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <li class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </li>
+                            </ul>
+                        @endguest
+                    </ul>
                     <!-- Cart Icon Starts -->
 {{--                    <li class="cart"><a href="shopping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>--}}
                     <!-- Cart Icon Starts -->
