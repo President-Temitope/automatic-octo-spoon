@@ -5,16 +5,22 @@ namespace Modules\Investments\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Investments\Entities\Investment;
 
 class InvestmentsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      * @return Renderable
      */
     public function index()
     {
-        return view('investments::index');
+        $investments = Investment::all();
+        return view('investments::index')->with('investments',$investments);
     }
 
     /**

@@ -19,7 +19,7 @@
                         <div class="slider-text text-center">
                             <h3 class="slide-title"><span>Secure</span> and <span>Easy Way</span><br/> To Bitcoin</h3>
                             <p>
-                                <a href="about.html" class="slider btn btn-primary">Learn more</a>
+                                <a href="/about" class="slider btn btn-primary">Learn more</a>
                             </p>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                                 <h3 class="slide-title"><span>Bitcoin</span> Exchange <br/>You can <span>Trust</span>
                                 </h3>
                                 <p>
-                                    <a href="pricing.html" class="slider btn btn-primary">our prices</a>
+                                    <a href="/investments" class="slider btn btn-primary">our prices</a>
                                 </p>
                             </div>
                         </div>
@@ -46,10 +46,10 @@
         </div>
         <!-- Carousel Inner Ends -->
         <!-- Carousel Controlers Starts -->
-        <a class="left carousel-control" href="index-2.html#main-slide" data-slide="prev">
+        <a class="left carousel-control" href="/#main-slide" data-slide="prev">
             <span><i class="fa fa-angle-left"></i></span>
         </a>
-        <a class="right carousel-control" href="index-2.html#main-slide" data-slide="next">
+        <a class="right carousel-control" href="/#main-slide" data-slide="next">
             <span><i class="fa fa-angle-right"></i></span>
         </a>
         <!-- Carousel Controlers Ends -->
@@ -273,7 +273,7 @@
                 <div class="row text-center">
                     <h2 class="title-head">Our <span>plans</span></h2>
                     <div class="title-head-subtitle">
-                        <p>..............</p>
+                        <p>A goal without a plan is just a wish.</p>
                     </div>
                 </div>
                 <!-- Section Title Ends -->
@@ -293,21 +293,25 @@
                         <!-- Pricing Switcher Ends -->
                         <!-- Pricing Tables Starts -->
                         <ul class="pricing-list bounce-invert">
+                            @if(count($investments) > 0)
+                                @foreach($investments as $investment)
                             <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                                 <ul class="pricing-wrapper">
                                     <!-- Buy Pricing Table #1 Starts -->
                                     <li data-type="buy" class="is-visible">
                                         <header class="pricing-header">
-                                            <h2>GET 0.007 BTC <span>For </span></h2>
+                                            <h2>GET {{$investment->proposed_amount}} BTC <span>For </span></h2>
                                             <div class="price">
                                                 <span class="currency"><i class="fa fa-dollar"></i></span>
-                                                <span class="value">100</span>
+                                                <span class="value">{{$investment->price}}</span>
                                             </div>
                                         </header>
                                         <footer class="pricing-footer">
-                                            <a href="#" class="btn btn-primary">ORDER NOW</a>
+                                            <a href="/getPlan/{{$investment->id}}" class="btn btn-primary">ORDER NOW</a>
                                         </footer>
                                     </li>
+                                @endforeach
+                                    @endif
                                     <!-- Buy Pricing Table #1 Ends -->
                                     <!-- Sell Pricing Table #1 Starts -->
                                 {{--                                <li data-type="sell" class="is-hidden">--}}
@@ -326,7 +330,7 @@
                                 <!-- Sell Pricing Table #1 Ends -->
                                 </ul>
                             </li>
-                            <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                           {{-- <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                                 <ul class="pricing-wrapper">
                                     <!-- Buy Pricing Table #2 Starts -->
                                     <li data-type="buy" class="is-visible">
@@ -343,18 +347,18 @@
                                     </li>
                                     <!-- Buy Pricing Table #2 Ends -->
                                     <!-- Sell Pricing Table #2 Starts -->
-                                {{--                                <li data-type="sell" class="is-hidden">--}}
-                                {{--                                    <header class="pricing-header">--}}
-                                {{--                                        <h2>GET 1000 USD <span>For </span></h2>--}}
-                                {{--                                        <div class="price">--}}
-                                {{--                                            <span class="currency"><i class="fa fa-bitcoin"></i></span>--}}
-                                {{--                                            <span class="value">0.5</span>--}}
-                                {{--                                        </div>--}}
-                                {{--                                    </header>--}}
-                                {{--                                    <footer class="pricing-footer">--}}
-                                {{--                                        <a href="#" class="btn btn-primary">ORDER NOW</a>--}}
-                                {{--                                    </footer>--}}
-                                {{--                                </li>--}}
+                                --}}{{--                                <li data-type="sell" class="is-hidden">--}}{{--
+                                --}}{{--                                    <header class="pricing-header">--}}{{--
+                                --}}{{--                                        <h2>GET 1000 USD <span>For </span></h2>--}}{{--
+                                --}}{{--                                        <div class="price">--}}{{--
+                                --}}{{--                                            <span class="currency"><i class="fa fa-bitcoin"></i></span>--}}{{--
+                                --}}{{--                                            <span class="value">0.5</span>--}}{{--
+                                --}}{{--                                        </div>--}}{{--
+                                --}}{{--                                    </header>--}}{{--
+                                --}}{{--                                    <footer class="pricing-footer">--}}{{--
+                                --}}{{--                                        <a href="#" class="btn btn-primary">ORDER NOW</a>--}}{{--
+                                --}}{{--                                    </footer>--}}{{--
+                                --}}{{--                                </li>--}}{{--
                                 <!-- Sell Pricing Table #2 Ends -->
                                 </ul>
                             </li>
@@ -390,7 +394,7 @@
                                     </li>
                                     <!-- Sell Pricing Table #3 Ends -->
                                 </ul>
-                            </li>
+                            </li>--}}
                             {{--                        <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">--}}
                             {{--                            <ul class="pricing-wrapper">--}}
                             {{--                                <!-- Buy Pricing Table #4 Starts -->--}}
@@ -590,7 +594,7 @@
     </section>
     <!-- Team Section Ends -->
     <!-- Quote and Chart Section Starts -->
-    <section class="image-block2">
+    {{--<section class="image-block2">
         <div class="container-fluid">
             <div class="row">
                 <!-- Quote Starts -->
@@ -620,7 +624,7 @@
                 <!-- Chart Ends -->
             </div>
         </div>
-    </section>
+    </section>--}}
     <!-- Quote and Chart Section Ends -->
     <!-- Call To Action Section Starts -->
     <section class="call-action-all">

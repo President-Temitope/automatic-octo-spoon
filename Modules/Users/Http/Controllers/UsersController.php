@@ -2,6 +2,7 @@
 
 namespace Modules\Users\Http\Controllers;
 
+use App\User;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -14,7 +15,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('users::index');
+        $users = User::simplePaginate(20);
+        return view('users::index')->with('users',$users);
     }
 
     /**
@@ -43,7 +45,8 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        return view('users::show');
+        $user = User::find($id);
+        return view('users::show')->with('user',$user);
     }
 
     /**
@@ -74,6 +77,6 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::destroy($id);
     }
 }

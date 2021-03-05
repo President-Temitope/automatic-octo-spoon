@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Modules\Investments\Entities\Investment;
 
 
 class SiteController extends Controller
@@ -12,7 +13,12 @@ class SiteController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $investments = Investment::all();
+        return view('index')->with('investments',$investments);
+    }
+
+    public function about(){
+        return view('about');
     }
 
 

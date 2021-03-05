@@ -5,6 +5,7 @@ namespace Modules\Dashboard\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Investments\Entities\Investment;
 
 class DashboardController extends Controller
 {
@@ -14,7 +15,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard::index');
+        $investments = Investment::all();
+        return view('dashboard::index')->with('investments',$investments);
     }
 
     /**

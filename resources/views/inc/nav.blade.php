@@ -19,9 +19,9 @@
                 <!-- Main Menu Starts -->
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="/about">About Us</a></li>
                     @auth
-                        <li><a href="">Plans</a></li>@endauth
+                        <li><a href="/investments">Plans</a></li>@endauth
                     {{--<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">pages <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
@@ -36,7 +36,7 @@
                             <li><a href="coming-soon.html">Coming Soon</a></li>
                         </ul>
                     </li>--}}
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/contact">Contact</a></li>
                     @guest
                         <li>
                             <a href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -52,7 +52,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->fullName() }} <i
                                     class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{route('dashboard')}}">Dashboard</a></li>
+                                <li><a href="/dashboard">Dashboard</a></li>
                                 <li><a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
