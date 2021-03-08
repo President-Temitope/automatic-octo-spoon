@@ -14,7 +14,7 @@
                 <!-- Content Starts -->
                 <div class="col-sm-12 col-md-7 col-lg-6">
                     <div class="feature-about">
-                        <h3 class="title-about">WE ARE BAYYA</h3>
+                        <h3 class="title-about">WE ARE {{config('app.name')}}</h3>
                         <p>A place for everyone who wants to simply buy and sell Bitcoins. Deposit funds using your Visa/MasterCard or bank transfer. Instant buy/sell of Bitcoins at fair price is guaranteed. Nothing extra. Join over 700,000 users from all over the world satisfied with our services.</p>
                     </div>
                     <div class="feature-about">
@@ -37,8 +37,8 @@
             <!-- Fact Badges Starts -->
             <div class="row text-center facts-content">
                 <div class="text-center heading-facts">
-                    <h2>Bayya<span> numbers</span></h2>
-                    <p>leading cryptocurrency exchange since day one of Bitcoin distribution</p>
+                    <h2>{{config('app.name')}}<span> numbers</span></h2>
+                    <p>leading cryptocurrency miner since day one of Bitcoin distribution</p>
                 </div>
                 <!-- Fact Badge Item Starts -->
                 <div class="col-xs-12 col-md-3 col-sm-6 fact">
@@ -65,9 +65,9 @@
                 </div>
                 <!-- Fact Badge Item Ends -->
                 <div class="col-xs-12 buttons">
-                    <a class="btn btn-primary btn-pricing" href="register.html">See pricing</a>
+                    <a class="btn btn-primary btn-pricing" href="/investments">See plans</a>
                     <span class="or"> or </span>
-                    <a class="btn btn-primary btn-register" href="register.html">Register Now</a>
+                    <a class="btn btn-primary btn-register" href="/register">Register Now</a>
                 </div>
             </div>
             <!-- Fact Badges Ends -->

@@ -5,17 +5,27 @@ namespace Modules\Dashboard\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Modules\Investments\Entities\Investment;
+use Modules\Investments\Repositories\InvestmentsRepository;
 
 class DashboardController extends Controller
 {
+    /**
+     * @var InvestmentsRepository
+     */
+    protected $investment;
+
+    public function __construct(InvestmentsRepository $investmentsRepository)
+    {
+        $this->investment = $investmentsRepository;
+    }
+
     /**
      * Display a listing of the resource.
      * @return Renderable
      */
     public function index()
     {
-        $investments = Investment::all();
+        $investments = $this->investment->queryWithStatus();
         return view('dashboard::index')->with('investments',$investments);
     }
 

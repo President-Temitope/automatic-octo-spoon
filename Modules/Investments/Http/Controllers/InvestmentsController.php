@@ -5,12 +5,19 @@ namespace Modules\Investments\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Modules\Investments\Entities\Investment;
+use Illuminate\Support\Facades\Validator;
+use Modules\Investments\Repositories\InvestmentsRepository;
 
 class InvestmentsController extends Controller
 {
-    public function __construct()
+    /**
+     * @var InvestmentsRepository
+     */
+    protected $investment;
+
+    public function __construct(InvestmentsRepository $investmentsRepository)
     {
+        $this->investment = $investmentsRepository;
         $this->middleware('auth');
     }
     /**
@@ -19,17 +26,8 @@ class InvestmentsController extends Controller
      */
     public function index()
     {
-        $investments = Investment::all();
+        $investments = $this->investment->queryWithStatus();
         return view('investments::index')->with('investments',$investments);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     * @return Renderable
-     */
-    public function create()
-    {
-        return view('investments::create');
     }
 
     /**
@@ -39,7 +37,14 @@ class InvestmentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Validator::make($request->all(),[
+            'price' => ['required | numeric'],
+            'proposed_amount' => ['required | numeric']
+        ]);
+        $investment = $this->investment->create($request->all());
+
+
+
     }
 
     /**
@@ -49,6 +54,7 @@ class InvestmentsController extends Controller
      */
     public function show($id)
     {
+
         return view('investments::show');
     }
 

@@ -11,4 +11,9 @@ interface CoreRepositoryInterface
     public function update($model, $id, array $data);
 
     public function delete($model, $id);
+
+
+    public function queryWithACondition($condition,$query,$model);
+
+    public function show($model,$id);
 }

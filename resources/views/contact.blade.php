@@ -14,7 +14,7 @@
                             <hr>
                             <!-- Breadcrumb Starts -->
                             <ul class="breadcrumb">
-                                <li><a href="index-2.html"> home</a></li>
+                                <li><a href="/"> home</a></li>
                                 <li>contact</li>
                             </ul>
                             <!-- Breadcrumb Ends -->
@@ -34,7 +34,7 @@
                     <h3 class="col-xs-12">feel free to drop us a message</h3>
                     <p class="col-xs-12">Need to speak to us? Do you have any queries or suggestions? Please contact us about all enquiries including membership and volunteer work using the form below.</p>
                     <!-- Contact Form Starts -->
-                    <form class="form-contact" method="post" action="http://slimhamdi.net/bayya/php/process-form.php">
+                    <form class="form-contact" method="post" action="">
                         <!-- Input Field Starts -->
                         <div class="form-group col-md-6">
                             <input class="form-control" name="firstname" id="firstname" placeholder="FIRST NAME" type="text" required>
@@ -101,7 +101,7 @@
                                 <div class="contact-info-box-content">
                                     <h4>Email Addresses</h4>
 
-                                    <p>contact@example.com<br>info@example.com</p>
+                                    <p>contact@autominner.com<br>support@autominner.com</p>
                                 </div>
                             </div>
                             <!-- Contact Info Box Ends -->

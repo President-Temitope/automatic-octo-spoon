@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Investment extends Model
 {
-    use HasFactory;
+    //use HasFactory;
 
     protected $fillable = [];
-    
-    protected static function newFactory()
-    {
-        return \Modules\Investments\Database\factories\InvestmentFactory::new();
-    }
+
+//    protected static function newFactory()
+//    {
+//        return \Modules\Investments\Database\factories\InvestmentFactory::new();
+//    }
 }

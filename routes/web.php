@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','SiteController@index');
+Route::get('/about','SiteController@about');
+Route::get('/contact','SiteController@contact');
+//Route::get('/plans','SiteController@index');
+
 
 
 

@@ -14,9 +14,9 @@ class CreateInvestmentTable extends Migration
     public function up()
     {
         //
-        Schema::create('investment', function (Blueprint $table){
+        Schema::create('investments', function (Blueprint $table){
             $table->id();
-            $table->string('price');
+            $table->float('price');
             $table->float('proposed_amount');
             $table->boolean('status')->default(true);
             $table->timestamps();
