@@ -21,7 +21,7 @@
                         <h3 class="title-about risk-title"><i class="fa fa-warning"></i> risk warning</h3>
                         <p>Bitcoin is not legal tender and is not backed by any government. Accounts and value balances are not subject to any government backed deposit insurance or any other government protections.</p>
                     </div>
-                    <a class="btn btn-primary btn-services" href="services.html">Our services</a>
+                    <a class="btn btn-primary btn-services" href="/investments">Our plans</a>
                 </div>
                 <!-- Content Ends -->
 

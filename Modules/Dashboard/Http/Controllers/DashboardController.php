@@ -17,6 +17,7 @@ class DashboardController extends Controller
     public function __construct(InvestmentsRepository $investmentsRepository)
     {
         $this->investment = $investmentsRepository;
+        $this->middleware('auth');
     }
 
     /**

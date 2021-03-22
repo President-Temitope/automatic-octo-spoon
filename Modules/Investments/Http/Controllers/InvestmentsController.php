@@ -26,7 +26,7 @@ class InvestmentsController extends Controller
      */
     public function index()
     {
-        $investments = $this->investment->queryWithStatus();
+        $investments = $this->investment->all();
         return view('investments::index')->with('investments',$investments);
     }
 
@@ -38,13 +38,11 @@ class InvestmentsController extends Controller
     public function store(Request $request)
     {
         Validator::make($request->all(),[
+            'title' => ['required | string'],
             'price' => ['required | numeric'],
             'proposed_amount' => ['required | numeric']
         ]);
         $investment = $this->investment->create($request->all());
-
-
-
     }
 
     /**
@@ -52,21 +50,6 @@ class InvestmentsController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function show($id)
-    {
-
-        return view('investments::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function edit($id)
-    {
-        return view('investments::edit');
-    }
 
     /**
      * Update the specified resource in storage.
@@ -76,7 +59,12 @@ class InvestmentsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Validator::make($request->all(),[
+            'title' => ['required | string'],
+            'price' => ['required | numeric'],
+            'proposed_amount' => ['required | numeric']
+        ]);
+        $this->investment->edit($id,$request->all());
     }
 
     /**
@@ -86,6 +74,7 @@ class InvestmentsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->investment->delete($id);
+        return 'done';
     }
 }

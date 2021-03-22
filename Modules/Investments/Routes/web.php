@@ -13,4 +13,7 @@
 
 Route::prefix('investments')->group(function() {
     Route::get('/', 'InvestmentsController@index');
+    Route::post('/deleteInvestment','InvestmentsController@delete');
+    Route::post('/updateInvestment','InvestmentsController@update');
+    Route::post('/createInvestment','InvestmentsController@store');
 });

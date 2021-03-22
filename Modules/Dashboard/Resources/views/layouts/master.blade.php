@@ -49,39 +49,50 @@
         </li>
 
         <!-- Divider -->
+        @can('edit payment')
         <hr class="sidebar-divider">
         <!-- Nav Item - Transaction -->
+
         <li class="nav-item active">
             <a class="nav-link" href="/">
                 <i class="fas fa-fw fa-history"></i>
                 <span>Transaction History</span></a>
         </li>
+        @endcan
 
         <!-- Divider -->
+        @can('add user')
         <hr class="sidebar-divider">
         <!-- Nav Item - Users -->
+
         <li class="nav-item active">
             <a class="nav-link" href="/">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Users</span></a>
         </li>
-
+    @endcan
         <!-- Divider -->
+        @can('edit investment')
         <hr class="sidebar-divider">
         <!-- Nav Item - Plans -->
+
         <li class="nav-item active">
             <a class="nav-link" href="/">
                 <i class="fas fa-fw fa-book-open"></i>
                 <span>Plans</span></a>
         </li>
+    @endcan
         <!-- Divider -->
+        @can('view payment')
         <hr class="sidebar-divider">
         <!-- Nav Item - Payment -->
+
         <li class="nav-item active">
             <a class="nav-link" href="/">
                 <i class="fas fa-fw fa-credit-card"></i>
                 <span>Payment</span></a>
         </li>
+    @endcan
        {{-- <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -329,15 +340,23 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->fullName()}}</span>
                              <img class="img-profile rounded-circle"
-                                  src="{{ Avatar::create(Auth::user()->fullName())->toBase64() }}">
+                                  src="{{ Avatar::create(Auth::user()->fullName())->toBase64() }}" alt="{{Auth::user()->fullName()}}">
                          </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
+                            @can('edit setting')
                             <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Profile
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
                             </a>
+                            @endcan
+                                @can('edit user')
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user-cog fa-sm fa-fw mr-2 text-gray-400"></i>
+                                profile
+                            </a>
+                            @endcan
                             {{--<a class="dropdown-item" href="#">
                                 <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Settings

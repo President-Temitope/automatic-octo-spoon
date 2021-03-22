@@ -2,8 +2,10 @@
 
 namespace Modules\Core\Database\Seeders;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\PermissionRegistrar;
@@ -19,9 +21,9 @@ class StartupSeederTableSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-        $perms = ['add', 'view', 'edit', 'delete'];
+        /*$perms = ['add', 'view', 'edit', 'delete'];
         $roles = ['user', 'admin', 'superAdmin'];
-        $modules = ['investment', 'user', 'payment'];
+        $modules = ['investment', 'user', 'payment'];*/
 
 
         // Reset cached roles and permissions
@@ -56,6 +58,7 @@ class StartupSeederTableSeeder extends Seeder
         $role1->givePermissionTo('delete user');
 
         $role1->givePermissionTo('edit investment');
+        $role1->givePermissionTo('edit setting');
         $role1->givePermissionTo('view investment');
         $role1->givePermissionTo('add investment');
         $role1->givePermissionTo('delete investment');
@@ -70,6 +73,7 @@ class StartupSeederTableSeeder extends Seeder
         // gets all permissions via Gate::before rule; see AuthServiceProvider
 
         $role3->givePermissionTo('edit payment');
+        $role3->givePermissionTo('edit setting');
         $role3->givePermissionTo('view payment');
         $role3->givePermissionTo('add payment');
         $role3->givePermissionTo('delete payment');
@@ -84,21 +88,33 @@ class StartupSeederTableSeeder extends Seeder
         $role3->givePermissionTo('add investment');
         $role3->givePermissionTo('delete investment');
         // create demo users
-        $user = User::factory()->create([
-            'name' => 'Example User',
+        $user = User::create([
             'email' => 'test@example.com',
-        ]);
-        $user->assignRole($role1);
-
-        $user = User::factory()->create([
-            'name' => 'Example Admin User',
-            'email' => 'admin@example.com',
+            'firstname' => 'Example',
+            'lastname' => 'User',
+            'cryptocurrency' => 'btc',
+            'wallet_address' => 'qwerty123654mnbvcxzaqsdrlkjhgfrt',
+            'password' => Hash::make('password')
         ]);
         $user->assignRole($role2);
 
-        $user = User::factory()->create([
-            'name' => 'Example Super-Admin User',
+        $user = User::create([
+            'firstname' => 'Admin',
+            'lastname' => 'User',
+            'cryptocurrency' => 'btc',
+            'wallet_address' => 'qwerty123654mnbvcxzaqsdrlkjhgfrt',
+            'email' => 'admin@example.com',
+            'password' => Hash::make('password')
+        ]);
+        $user->assignRole($role1);
+
+        $user = User::create([
+            'firstname' => 'Super',
+            'lastname' => 'Admin',
+            'cryptocurrency' => 'btc',
+            'wallet_address' => 'qwerty123654mnbvcxzaqsdrlkjhgfrt',
             'email' => 'superadmin@example.com',
+            'password' => Hash::make('password')
         ]);
         $user->assignRole($role3);
 
@@ -129,19 +145,18 @@ class StartupSeederTableSeeder extends Seeder
 
         /*
     // create demo users
-$user = \App\Models\User::factory()->create(['name' => 'Example User',
+$user = \App\Models\User::create(['name' => 'Example User',
 'email' => 'test@example.com',]);
 $user->assignRole($role1);
 
-$user = \App\Models\User::factory()->create(['name' => 'Example Admin User',
+$user = \App\Models\User::create(['name' => 'Example Admin User',
 'email' => 'admin@example.com',]);
 $user->assignRole($role2);
 
-$user = \App\Models\User::factory()->create(['name' => 'Example Super-Admin User',
+$user = \App\Models\User::create(['name' => 'Example Super-Admin User',
 'email' => 'superadmin@example.com',]);
 $user->assignRole($role3);*/
-}
-
+    }
 
 
 }
