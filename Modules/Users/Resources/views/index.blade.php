@@ -1,10 +1,16 @@
 @extends('dashboard::layouts.master')
 
 @section('content')
-
-    <h1>Hello World</h1>
-
-    <p>
-        This view is loaded from module: {!! config('users.name') !!}
-    </p>
+    @if(count($users) > 0 )
+        @include('Core::table',[
+        $title => 'Users Table',
+        $description => 'Manage all users activities',
+        $fieldlists => ['id','firstname','lastname','email','cryptocurrency','wallet','email_verified_at','created_at'],
+        $modeldata => $users
+    ])
+    @else
+        <script>
+            alert('No User is currently signed up')
+        </script>
+    @endif
 @endsection

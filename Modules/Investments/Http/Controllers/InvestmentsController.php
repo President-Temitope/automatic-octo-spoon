@@ -26,7 +26,7 @@ class InvestmentsController extends Controller
      */
     public function index()
     {
-        $investments = $this->investment->all();
+        $investments = $this->investment->queryWithStatus();
         return view('investments::index')->with('investments',$investments);
     }
 
@@ -76,5 +76,10 @@ class InvestmentsController extends Controller
     {
         $this->investment->delete($id);
         return 'done';
+    }
+
+    public function viewAll(){
+       $investments =  $this->investment->all();
+       return view('investments::viewAll')->with('investments',$investments);
     }
 }
