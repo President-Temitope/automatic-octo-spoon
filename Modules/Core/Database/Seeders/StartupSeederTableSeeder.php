@@ -31,6 +31,7 @@ class StartupSeederTableSeeder extends Seeder
 
         // create permissions
         Permission::create(['name' => 'edit user']);
+        Permission::create(['name' => 'edit setting']);
         Permission::create(['name' => 'add user']);
         Permission::create(['name' => 'view user']);
         Permission::create(['name' => 'delete user']);
@@ -117,45 +118,6 @@ class StartupSeederTableSeeder extends Seeder
             'password' => Hash::make('password')
         ]);
         $user->assignRole($role3);
-
-
-        /*// Reset cached roles and permissions
-        app()[PermissionRegistrar::class]->forgetCachedPermissions();
-
-        // create permissions
-        foreach ($perms as $perm){
-            foreach ($modules as $module) {
-
-                Permission::create(['name' => $perm . ' ' . $module]);
-            }
-
-            // create roles and assign existing permissions
-            foreach ($roles as $role){
-                $published_role =  Role::create(['name' => $role]);
-                if($role == 'user'){
-                if ($perm == 'add' || $perm == 'view'){
-                    $published_role->givePermissionTo($perm . ' ' . $module);
-                    }
-
-                }else
-                    $published_role->givePermissionTo($perm . ' ' . $module);
-
-        }
-    }*/
-
-        /*
-    // create demo users
-$user = \App\Models\User::create(['name' => 'Example User',
-'email' => 'test@example.com',]);
-$user->assignRole($role1);
-
-$user = \App\Models\User::create(['name' => 'Example Admin User',
-'email' => 'admin@example.com',]);
-$user->assignRole($role2);
-
-$user = \App\Models\User::create(['name' => 'Example Super-Admin User',
-'email' => 'superadmin@example.com',]);
-$user->assignRole($role3);*/
     }
 
 
