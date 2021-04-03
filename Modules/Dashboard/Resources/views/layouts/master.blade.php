@@ -424,6 +424,7 @@
         </div>
     </div>
 </div>
+</div>
 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf
 </form>
@@ -443,20 +444,8 @@
 <!-- Page level custom scripts -->
 <script src="{{asset('js/demo/chart-area-demo.js')}}"></script>
 <script src="{{asset('js/demo/chart-pie-demo.js')}}"></script>
-    <!--Start of Tawk.to Script-->
-    <script>
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/6062a057067c2605c0bd8258/1f20k4uvp';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
-</div>
+<div class="pubble-app" data-app-id="96446" data-app-identifier="96446"></div>
+<script type="text/javascript" src="https://cdn.chatify.com/javascript/loader.js" defer></script>
 </body>
 
 </html>
