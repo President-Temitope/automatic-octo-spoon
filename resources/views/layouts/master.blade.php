@@ -319,8 +319,7 @@
     <script src="{{asset('js/custom.js')}}"></script>
 </div>
 <!-- Wrapper Ends -->
-<div class="pubble-app" data-app-id="96446" data-app-identifier="96446"></div>
-<script type="text/javascript" src="https://cdn.chatify.com/javascript/loader.js" defer></script>
+<script src="//code.jivosite.com/widget/a8wNYWI9B3" async></script>
 </body>
 
 </html>
