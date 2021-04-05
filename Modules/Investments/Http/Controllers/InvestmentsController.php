@@ -37,19 +37,18 @@ class InvestmentsController extends Controller
      */
     public function store(Request $request)
     {
-        Validator::make($request->all(),[
-            'title' => ['required | string'],
-            'price' => ['required | numeric'],
-            'proposed_amount' => ['required | numeric']
+       $validator = Validator::make($request->all(),[
+            'title' => ['required','string'],
+            'price' => ['required','numeric'],
+            'proposed_amount' => ['required','numeric']
         ]);
-        $investment = $this->investment->create($request->all());
+        if ($validator->failed()){
+            return redirect()->back()->withErrors($validator);
+        }
+        $this->investment->create($validator->validated());
+        return redirect()->back()->with('success','Investment plan added successfully');
     }
 
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
 
     /**
      * Update the specified resource in storage.
@@ -57,14 +56,19 @@ class InvestmentsController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        Validator::make($request->all(),[
-            'title' => ['required | string'],
-            'price' => ['required | numeric'],
-            'proposed_amount' => ['required | numeric']
+      $validator =   Validator::make($request->all(),[
+          'title' => ['required','string'],
+          'price' => ['required','numeric'],
+          'proposed_amount' => ['required','numeric']
         ]);
-        $this->investment->edit($id,$request->all());
+        if ($validator->failed()){
+            return redirect()->back()->withErrors($validator);
+        }
+        $id = $request['id'];
+        $this->investment->edit($id,$validator->validated());
+        return redirect()->back()->with('success','Investment plan updated successfully');
     }
 
     /**
@@ -75,11 +79,16 @@ class InvestmentsController extends Controller
     public function destroy($id)
     {
         $this->investment->delete($id);
-        return 'done';
+        return redirect()->back()->with('success','Investment plan deleted successfully');
     }
 
     public function viewAll(){
        $investments =  $this->investment->all();
        return view('investments::viewAll')->with('investments',$investments);
+    }
+
+    public function deactivatePlan($id){
+        $this->investment->edit($id,['status'=>'false']);
+        return redirect()->back()->with('success','Investment plan updated successfully');
     }
 }

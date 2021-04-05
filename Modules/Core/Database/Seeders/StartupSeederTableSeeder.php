@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Modules\Investments\Entities\Investment;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\PermissionRegistrar;
@@ -118,6 +119,27 @@ class StartupSeederTableSeeder extends Seeder
             'password' => Hash::make('password')
         ]);
         $user->assignRole($role3);
+
+        /**
+         * Investment seed runner
+         */
+        Investment::create([
+           'title' => 'Testing',
+           'price' => 1,
+           'proposed_amount' => 5
+        ],[
+           'title' => 'Testing 1',
+           'price' => 100,
+           'proposed_amount' => 500
+        ],[
+           'title' => 'Testing 2',
+           'price' => 1000,
+           'proposed_amount' => 50000
+        ],[
+           'title' => 'Testing 3',
+           'price' => 10000,
+           'proposed_amount' => 500000
+        ]);
     }
 
 

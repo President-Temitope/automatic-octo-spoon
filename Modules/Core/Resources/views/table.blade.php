@@ -8,7 +8,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">{{$description}}</h6>
-            <button class="btn btn-outline-success -align-right">Add plan</button>
+            <button class="btn btn-outline-success -align-right" {!! $addButton !!}>Add plan</button>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -17,29 +17,41 @@
                     <tr>
                         @foreach($fieldlists as $fieldlist)
                             <th>{{$fieldlist}}</th>
-                            <th>Actions</th>
+
                         @endforeach
+                        <th>Actions</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         @foreach($fieldlists as $fieldlist)
-                            <th>Actions</th>
+                            <th>{{$fieldlist}}</th>
                         @endforeach
+                        <th>Actions</th>
                     </tr>
                     </tfoot>
                     <tbody>
                     @if(count($modeldata) > 0)
-                    <tr>
-                        @foreach($fieldlists as $fieldlist)
-                            @foreach($modeldata as $data)
-                        <td>{{$data->$fieldlist}}</td>
-                        <td><button class="btn btn-outline-secondary ">Edit plan</button></td>
-                        <td> <button class="btn btn-outline-danger ">Delete plan</button></td>
-                            @endforeach
+
+                        @foreach($modeldata as $data)
+
+
+
+                            <tr>
+                                @foreach($fieldlists as $fieldlist)
+
+                                    <td>{{$data->$fieldlist}}</td>
+
+                                @endforeach
+
+                                <td>
+                                    <a href="" class="btn btn-outline-secondary {!! $editButton !!}}">Edit</a> <span><a href="{!! $deleteButton !!}" class="btn btn-outline-danger ">Delete</a></span>
+                                </td>
+                            </tr>
                         @endforeach
-                    </tr>
-                        @endif
+
+
+                    @endif
                     </tbody>
                 </table>
             </div>
