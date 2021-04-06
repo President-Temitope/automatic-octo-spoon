@@ -88,7 +88,7 @@
         <!-- Nav Item - Payment -->
 
         <li class="nav-item active">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href="/payments">
                 <i class="fas fa-fw fa-credit-card"></i>
                 <span>Payment</span></a>
         </li>
@@ -223,6 +223,7 @@
 </div>
 
         <!-- Settings Modal -->
+        @if(Auth::user()->hasRole(['admin,super-admin']))
         <div class="modal fade" id="settings">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -262,6 +263,7 @@
                 </div>
             </div>
         </div>
+        @endif
         @endauth
 
 

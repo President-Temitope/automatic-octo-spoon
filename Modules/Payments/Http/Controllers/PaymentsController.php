@@ -3,8 +3,9 @@
 namespace Modules\Payments\Http\Controllers;
 
 use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Http\Request;
+
 use Illuminate\Routing\Controller;
+use Modules\Payments\Entities\Payment;
 
 class PaymentsController extends Controller
 {
@@ -14,61 +15,32 @@ class PaymentsController extends Controller
      */
     public function index()
     {
-        return view('payments::index');
+       $payments = Payment::all();
+        return view('payments::index')->with('payments',$payments);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Approve Payment.
+     * @param int $id
      * @return Renderable
      */
-    public function create()
+    public function approvePayment($id)
     {
-        return view('payments::create');
+
     }
 
     /**
-     * Store a newly created resource in storage.
-     * @param Request $request
+     * Transaction history.
+
      * @return Renderable
      */
-    public function store(Request $request)
+    public function transactionHistory()
     {
         //
     }
 
     /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function show($id)
-    {
-        return view('payments::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function edit($id)
-    {
-        return view('payments::edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $id
-     * @return Renderable
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
+     * Delete Payment.
      * @param int $id
      * @return Renderable
      */

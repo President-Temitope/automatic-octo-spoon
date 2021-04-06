@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Modules\Payments\Entities\Payment;
 use Spatie\Permission\Traits\HasRoles;
 
 
@@ -42,5 +43,11 @@ class User extends Authenticatable
 
     public function fullName(){
         return $this->firstname .' '. $this->lastname;
+    }
+
+
+    public function payments(){
+        return $this->hasMany(Payment::class);
+
     }
 }

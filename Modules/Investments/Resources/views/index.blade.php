@@ -49,9 +49,10 @@
                                                     <span class="value">{{$investment->price}}</span>
                                                 </div>
                                             </header>
-                                            <footer class="pricing-footer">
-                                                <a href="/getPlan/{{$investment->id}}" class="btn btn-primary">ORDER NOW</a>
-                                            </footer>
+                                            @if(Auth::user()->hasRole('user')) <footer class="pricing-footer">
+                                                <a href="/investments/getPlan/{{$investment->id}}" class="btn btn-primary">ORDER NOW</a>
+                                            </footer>@endif
+
                                         </li>
                                         <!-- Pricing Table #1 Ends -->
                                     </ul>

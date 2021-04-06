@@ -209,7 +209,8 @@
                                 <h3 class="text-capitalize text-center">{{$investment->proposed_amount}} BTC</h3>
                                 <p class="text-capitalize text-center">for</p>
                                 <h3 class="text-capitalize text-center"><span><i class="fa fa-dollar">$</i></span>{{$investment->price}}</h3>
-                                <button class="text-center btn btn-outline-success">Make Offer</button>
+                                @if(Auth::user()->hasRole('user')) Hi @endif
+                                <a href="/investments/getPlan/{{$investment->id}}" class="text-center btn btn-outline-success">Make Offer</a>
                             </div>
                         </div>
                     </div>

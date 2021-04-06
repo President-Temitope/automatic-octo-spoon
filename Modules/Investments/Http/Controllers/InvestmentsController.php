@@ -2,9 +2,12 @@
 
 namespace Modules\Investments\Http\Controllers;
 
+use Carbon\Carbon;
+use Carbon\Traits\Date;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Modules\Investments\Repositories\InvestmentsRepository;
 
@@ -34,6 +37,7 @@ class InvestmentsController extends Controller
      * Store a newly created resource in storage.
      * @param Request $request
      * @return Renderable
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request)
     {
@@ -55,6 +59,7 @@ class InvestmentsController extends Controller
      * @param Request $request
      * @param int $id
      * @return Renderable
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function update(Request $request)
     {
@@ -91,4 +96,24 @@ class InvestmentsController extends Controller
         $this->investment->edit($id,['status'=>'false']);
         return redirect()->back()->with('success','Investment plan updated successfully');
     }
+
+    /**
+     *getPlan method
+     * This handles the purchase of plans by users
+     */
+    public function getPlan($id)
+    {
+        DB::table('payments')
+            ->insert(
+                [
+                  'user_id' => auth()->id(),
+                  'investment_id' => $id,
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ]
+            );
+        return redirect()->back()->with('success','Offer made successfully, await confirmation');
+
+    }
+
 }

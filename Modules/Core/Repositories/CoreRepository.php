@@ -30,7 +30,7 @@ class CoreRepository implements CoreRepositoryInterface
     public function delete($model, $id)
     {
         // TODO: Implement delete() method.
-        return $model::where('id', $id)->destroy();
+        return $model::where('id', $id)->delete();
     }
 
     /**
