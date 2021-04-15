@@ -111,7 +111,7 @@
             <div class="row about-content">
                 <!-- Image Starts -->
                 <div class="col-sm-12 col-md-5 col-lg-6 text-center">
-                    <img id="about-us" class="img-responsive img-about-us" src="images/about-us.png" alt="about us">
+                    <img id="about-us" class="img-responsive img-about-us" src="images/npo.jpg" alt="about us">
                 </div>
                 <!-- Image Ends -->
                 <!-- Content Starts -->
@@ -513,7 +513,7 @@
                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="team-member">
                         <!-- Team Member Picture Starts -->
-                        <img src="images/team/member2.jpg" class="img-responsive" alt="team member">
+                        <img src="images/npg.jpg" class="img-responsive" alt="team member">
                         <!-- Team Member Picture Ends -->
                         <!-- Team Member Details Starts -->
                         <div class="team-member-caption social-icons">
