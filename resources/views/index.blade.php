@@ -111,7 +111,7 @@
             <div class="row about-content">
                 <!-- Image Starts -->
                 <div class="col-sm-12 col-md-5 col-lg-6 text-center">
-                    <img id="about-us" class="img-responsive img-about-us" src="images/about-us.png" alt="about us">
+                    <img id="about-us" class="img-responsive img-about-us" src="images/npo.jpg" alt="about us">
                 </div>
                 <!-- Image Ends -->
                 <!-- Content Starts -->
