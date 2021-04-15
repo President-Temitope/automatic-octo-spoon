@@ -103,7 +103,7 @@
             <div class="row text-center">
                 <h2 class="title-head">About <span>Us</span></h2>
                 <div class="title-head-subtitle">
-                    <p>A COMMERCIAL WEBSITE THAR OFFERS HASH POWER TO MINE CRYPTOCURRENCYS</p>
+                    <p>A COMMERCIAL WEBSITE THAT OFFERS HASH POWER TO MINE CRYPTOCURRENCIES</p>
                 </div>
             </div>
             <!-- Section Title Ends -->
