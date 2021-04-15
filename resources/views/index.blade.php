@@ -307,7 +307,7 @@
                                             </div>
                                         </header>
                                         <footer class="pricing-footer">
-                                            <a href="/getPlan/{{$investment->id}}" class="btn btn-primary">ORDER NOW</a>
+                                            <a href="/getPlan/{{$investment->id}}" class="btn btn-primary">START PLAN</a>
                                         </footer>
                                     </li>
                                 @endforeach
