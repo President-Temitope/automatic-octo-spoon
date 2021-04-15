@@ -90,9 +90,8 @@
                             <div class="contact-info-box">
                                 <i class="fa fa-phone big-icon"></i>
                                 <div class="contact-info-box-content">
-                                    <h4>Phone Numbers</h4>
-                                    <p>+88 0123 4567 890<br>+88 0231 3421 453</p>
-                                </div>
+                                    <h4>PHONE NUMBER </h4>
+                                    <p>+1 318 406 9020<p>
                             </div>
                             <!-- Contact Info Box Ends -->
                             <!-- Contact Info Box Starts -->
