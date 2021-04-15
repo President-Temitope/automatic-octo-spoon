@@ -143,7 +143,7 @@
                                 <span>support@autominner.com</span>
                             </div>
                             <div>
-                                <span>00216 21 184 010</span>
+                                <span>+1 318 406 9020 </span>
                             </div>
                             <div>
                                 <span>London, England</span>
