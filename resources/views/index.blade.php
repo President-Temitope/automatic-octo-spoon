@@ -17,7 +17,7 @@
                 <div class="slider-content">
                     <div class="container">
                         <div class="slider-text text-center">
-                            <h3 class="slide-title"><span>Secure</span> and <span>Easy Way</span><br/> To mine Bitcoin</h3>
+                            <h3 class="slide-title"><span>Secure</span> and <span>Easy Way</span><br/> To mine cryptocurrencies</h3>
                             <p>
                                 <a href="/about" class="slider btn btn-primary">Learn more</a>
                             </p>
@@ -32,10 +32,10 @@
                     <div class="col-md-12">
                         <div class="container">
                             <div class="slider-text text-center">
-                                <h3 class="slide-title"><span>Bitcoin</span> minin <br/>You can <span>Trust</span>
+                                <h3 class="slide-title"><span>The legit mining</span> platform <br/>You can <span>Trust</span>
                                 </h3>
                                 <p>
-                                    <a href="/investments" class="slider btn btn-primary"> plans</a>
+                                    <a href="/investments" class="slider btn btn-primary"> learn more</a>
                                 </p>
                             </div>
                         </div>
