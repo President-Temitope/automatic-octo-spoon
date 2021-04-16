@@ -540,7 +540,7 @@
                     <!-- Team Member-->
                     <div class="team-member">
                         <!-- Team Member Picture Starts -->
-                        <img src="images/np.jpg" class="img-responsive" alt="team member">
+                        <img src="images/npk.jpg" class="img-responsive" alt="team member">
                         <!-- Team Member Picture Ends -->
                         <!-- Team Member Details Starts -->
                         <div class="team-member-caption social-icons">
