@@ -32,10 +32,10 @@
                     <div class="col-md-12">
                         <div class="container">
                             <div class="slider-text text-center">
-                                <h3 class="slide-title"><span>Bitcoin</span> Exchange <br/>You can <span>Trust</span>
+                                <h3 class="slide-title"><span>Bitcoin</span> minin <br/>You can <span>Trust</span>
                                 </h3>
                                 <p>
-                                    <a href="/investments" class="slider btn btn-primary">our prices</a>
+                                    <a href="/investments" class="slider btn btn-primary"> plans</a>
                                 </p>
                             </div>
                         </div>
@@ -70,8 +70,7 @@
                     </div>
                 </div>
                 <!-- Feature Box Ends -->
-                <!-- Feature Box Starts -->
-                <div class="feature-box two col-md-4 col-sm-12">
+                <!-- Feature Box Starts            <div class="feature-box two col-md-4 col-sm-12">
                         <span class="feature-icon">
 							<img id="add-bitcoins" src="images/icons/orange/add-bitcoins.png" alt="add bitcoins">
 						</span>
@@ -342,7 +341,7 @@
                                             </div>
                                         </header>
                                         <footer class="pricing-footer">
-                                            <a href="#" class="btn btn-primary">ORDER NOW</a>
+                                            <a href="#" class="btn btn-primary">BUY PLAN</a>
                                         </footer>
                                     </li>
                                     <!-- Buy Pricing Table #2 Ends -->
@@ -477,7 +476,7 @@
             <div class="row text-center">
                 <h2 class="title-head">our <span>experts</span></h2>
                 <div class="title-head-subtitle">
-                    <p> A talented team of Cryptocurrency experts based in London</p>
+                    <p> A talented team of Cryptocurrency experts based in AUSTRALIA</p>
                 </div>
             </div>
             <!-- Section Title Ends -->
@@ -635,7 +634,7 @@
                         <!-- Call To Action Text Starts -->
                         <div class="action-text">
                             <h2>Get Started Today With Bitcoin</h2>
-                            <p class="lead">Open account for free and start trading Bitcoins!</p>
+                            <p class="lead">Open account for free and start mining cryptocurrencies!</p>
                         </div>
                         <!-- Call To Action Text Ends -->
                         <!-- Call To Action Button Starts -->
