@@ -309,8 +309,7 @@
                                             <a href="/getPlan/{{$investment->id}}" class="btn btn-primary">START PLAN</a>
                                         </footer>
                                     </li>
-                                @endforeach
-                                    @endif
+
                                     <!-- Buy Pricing Table #1 Ends -->
                                     <!-- Sell Pricing Table #1 Starts -->
                                 {{--                                <li data-type="sell" class="is-hidden">--}}
@@ -329,6 +328,8 @@
                                 <!-- Sell Pricing Table #1 Ends -->
                                 </ul>
                             </li>
+                                @endforeach
+                            @endif
                            {{-- <li class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                                 <ul class="pricing-wrapper">
                                     <!-- Buy Pricing Table #2 Starts -->
