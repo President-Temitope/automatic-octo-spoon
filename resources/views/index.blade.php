@@ -517,8 +517,8 @@
                         <!-- Team Member Picture Ends -->
                         <!-- Team Member Details Starts -->
                         <div class="team-member-caption social-icons">
-                            <h4>Marco Verratti</h4>
-                            <p>Director</p>
+                            <h4>JEFFERY KURT</h4>
+                            <p>founder and cmo</p>
                             <ul class="list list-inline social">
                                 <li>
                                     <a href="#" class="fa fa-facebook"></a>
@@ -540,12 +540,12 @@
                     <!-- Team Member-->
                     <div class="team-member">
                         <!-- Team Member Picture Starts -->
-                        <img src="images/team/member3.jpg" class="img-responsive" alt="team member">
+                        <img src="images/np.jpg" class="img-responsive" alt="team member">
                         <!-- Team Member Picture Ends -->
                         <!-- Team Member Details Starts -->
                         <div class="team-member-caption social-icons">
-                            <h4>Emilia Bella</h4>
-                            <p>Bitcoin Consultant</p>
+                            <h4>FREDDIE WADE</h4>
+                            <p>Bitcoin Consultant/admin</p>
                             <ul class="list list-inline social">
                                 <li>
                                     <a href="#" class="fa fa-facebook"></a>
@@ -566,12 +566,12 @@
                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="team-member">
                         <!-- Team Member Picture Starts -->
-                        <img src="images/team/member4.jpg" class="img-responsive" alt="team member">
+                        <img src="images/nqe.jpg" class="img-responsive" alt="team member">
                         <!-- Team Member Picture Ends -->
                         <!-- Team Member Details Starts -->
                         <div class="team-member-caption social-icons">
-                            <h4>Antonio Conte</h4>
-                            <p>Bitcoin Developer</p>
+                            <h4>ALFREDO KIRK</h4>
+                            <p>co founder</p>
                             <ul class="list list-inline social">
                                 <li>
                                     <a href="#" class="fa fa-facebook"></a>
