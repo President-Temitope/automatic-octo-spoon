@@ -126,8 +126,8 @@
                         whatsminer M3x
                         AntMiner D3
                         to extract automatic payout to investors wallet address ..
-                        With our aim to purchase and host our own mining equipment operations . to provide service
-                        maintenance for that purpose we found our own main site in the city of australia and usa ,built
+                        With our aim to purchase and host our own mining equipment operations . we provide service
+                        maintenance, for that purpose we found our own main site in the city of australia and usa ,built
                         all required mining infrastructure .A team of professional miners was aasembled to monitor
                         eqiupment oeprtations to provide adequate service maintainance ,we have over 500,000 users from
                         all over the world satisfied with our services!
@@ -144,13 +144,13 @@
                                 and verify ultra-secure financial data without interference of third parties.</p>
                         </div>
                         <div id="menu2" class="tab-pane fade">
-                            <p>Our mission as an official partner of Bitcoin Foundation is to help you enter and better
-                                understand the world of #1 cryptocurrency and avoid any issues you may encounter.</p>
+                            <p>Our mission as an official partner of Bitcoin mining Foundation is to help you enter and better
+                                understand the world of #1 cryptocurrency and avoid any issues you may encounter while mining.</p>
                         </div>
                         <div id="menu3" class="tab-pane fade">
                             <p>We are here because we are passionate about open, transparent markets and aim to be a
                                 major driving force in widespread adoption, we are the first and the best in
-                                cryptocurrency. </p>
+                                cryptocurrency mining. </p>
                         </div>
                     </div>
                     {{--                    <a class="btn btn-primary" href="{{route('about')}}">Read More</a>--}}
