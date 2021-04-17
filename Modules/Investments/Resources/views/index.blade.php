@@ -43,10 +43,12 @@
                                         <!-- Pricing Table #1 Starts -->
                                         <li>
                                             <header class="pricing-header">
-                                                <h2>GET {{$investment->proposed_amount}} BTC <span>For </span></h2>
                                                 <div class="price">
                                                     <span class="currency"><i class="fa fa-dollar"></i></span>
                                                     <span class="value">{{$investment->price}}</span>
+                                                    <h2>{{$investment->daysOfMining}} <span>Days of mining </span></h2>
+                                                    <h2><span>Starts after  </span>{{$investment->startDate}} </h2>
+                                                    <h2><span>Plan hashrate  </span>{{$investment->rate}} </h2>
                                                 </div>
                                             </header>
                                             @if(Auth::user()->hasRole('user')) <footer class="pricing-footer">

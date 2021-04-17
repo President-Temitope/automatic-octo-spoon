@@ -101,6 +101,23 @@
         </div>
 @include('inc.nav')
     </header>
+    @if(session()->has('success'))
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            {{ session()->get('success') }}
+        </div>
+    @elseif(session()->has('errors'))
+        <div class="alert alert-danger alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            @foreach(session()->get('errors') as $error)
+                <ul>
+                    <ol>{{$error}}</ol>
+                </ul>
+            @endforeach
+        </div>
+    {{--($errors->any())
+{!! implode('', $errors->all('<div>:message</div>')) !!}--}}
+@endif
     <!-- Header Ends -->
   @yield('content')
 

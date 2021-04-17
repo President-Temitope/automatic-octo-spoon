@@ -154,17 +154,17 @@
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                              aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Operations:</div>
-                                            <a class="dropdown-item" data-toggle="modal" data-target="#{{Str::slug($investment->title,'-')}}">Edit</a>
+                                            <a class="dropdown-item" data-toggle="modal" data-target="#{{Str::slug($investment->name,'-')}}">Edit</a>
                                             <a class="dropdown-item" href="/investments/deactivateInvestment/{{$investment->id}}">Deactivate</a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="/investments/deleteInvestment/{{$investment->id}}">Delete</a>
                                         </div>
                                     </div>
-                                    <div class="modal fade" id="{{Str::slug($investment->title,'-')}}">
+                                    <div class="modal fade" id="{{Str::slug($investment->name,'-')}}">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title">{{$investment->title}}'s details:</h5>
+                                                    <h5 class="modal-title">{{$investment->name}}'s details:</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
