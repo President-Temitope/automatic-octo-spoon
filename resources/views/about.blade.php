@@ -8,14 +8,14 @@
             <div class="row about-content">
                 <!-- Image Starts -->
                 <div class="col-sm-12 col-md-5 col-lg-6 text-center">
-                    <img id="about-us" class="img-responsive img-about-us" src="geg.jpeg" alt="about us">
+                    <img id="about-us" class="img-responsive img-about-us" src="images/geg.jpg" alt="about us">
                 </div>
                 <!-- Image Ends -->
                 <!-- Content Starts -->
                 <div class="col-sm-12 col-md-7 col-lg-6">
                     <div class="feature-about">
                         <h3 class="title-about">WE ARE {{config('app.name')}}</h3>
-                        <p>A place for everyone who wants to simply mine and earn cryptocurrencies.sign up with  your wallet, choose most suitable mining planfor you with no hidden or required fees, automatic profit return guaranteed. Nothing extra. Join over 700,000 users from all over the world satisfied with our services.</p>
+                        <p>A place for everyone who wants to simply mine and earn cryptocurrencies.sign up with  your wallet, choose most suitable mining plan for you with no hidden or required fees, automatic profit return guaranteed. Nothing extra. Join over 700,000 users from all over the world satisfied with our services.</p>
                     </div>
                     <div class="feature-about">
                         <h3 class="title-about risk-title"><i class="fa fa-warning"></i> risk warning</h3>
@@ -143,7 +143,7 @@
                     <!-- Team Member-->
                     <div class="team-member">
                         <!-- Team Member Picture Starts -->
-                        <img src="images/npk.jpeg" class="img-responsive" alt="team member">
+                        <img src="images/npk.jpg" class="img-responsive" alt="team member">
                         <!-- Team Member Picture Ends -->
                         <!-- Team Member Details Starts -->
                         <div class="team-member-caption social-icons">
@@ -169,7 +169,7 @@
                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
                     <div class="team-member">
                         <!-- Team Member Picture Starts -->
-                        <img src="images/nqe.jpeg" class="img-responsive" alt="team member">
+                        <img src="images/nqe.jpg" class="img-responsive" alt="team member">
                         <!-- Team Member Picture Ends -->
                         <!-- Team Member Details Starts -->
                         <div class="team-member-caption social-icons">
