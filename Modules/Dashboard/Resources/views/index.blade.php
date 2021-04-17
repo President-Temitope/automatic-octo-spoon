@@ -204,13 +204,13 @@
                             </div>
                             <!-- Card Body -->
                             <div class="card-body">
-                                <h3 class="text-capitalize text-center">{{$investment->title}}</h3>
-                                <p class="text-capitalize text-center">get</p>
-                                <h3 class="text-capitalize text-center">{{$investment->proposed_amount}} BTC</h3>
-                                <p class="text-capitalize text-center">for</p>
-                                <h3 class="text-capitalize text-center"><span><i class="fa fa-dollar">$</i></span>{{$investment->price}}</h3>
-                                @if(Auth::user()->hasRole('user')) Hi @endif
-                                <a href="/investments/getPlan/{{$investment->id}}" class="text-center btn btn-outline-success">Make Offer</a>
+                                <h3 class="text-capitalize text-center">{{$investment->name}}</h3>
+                                <h3 class="text-capitalize text-center">$ {{$investment->price}}</h3>
+                                <h3 class="text-capitalize text-center">{{$investment->daysOfMining}} <span>Days of mining </span></h3>
+                                <h3 class="text-capitalize text-center"><span>Starts after  </span>{{$investment->startDate}}</h3>
+                                <h3 class="text-capitalize text-center"><span>Plan hashrate  </span>{{$investment->rate}} </h3>
+                                @if(Auth::user()->hasRole('user'))
+                                <a href="/investments/getPlan/{{$investment->id}}" class="text-center btn btn-outline-success">Make Offer</a>@endif
                             </div>
                         </div>
                     </div>

@@ -82,8 +82,24 @@
                 <span>Plans</span></a>
         </li>
     @endcan
+         <!-- Divider -->
+        @if(Auth::user()->hasRole('user'))
+        <hr class="sidebar-divider">
+        <!-- Nav Item - Plans -->
+
+        <li class="nav-item active">
+            <a class="nav-link" href="">
+                <i class="fas fa-fw fa-money-bill"></i>
+                <span>Request Payout</span></a>
+        </li>
+    <li class="nav-item active">
+            <a class="nav-link" href="">
+                <i class="fas fa-fw fa-check-circle"></i>
+                <span>Request Capital</span></a>
+        </li>
+    @endif
         <!-- Divider -->
-        @can('view payment')
+        @can('edit payment')
         <hr class="sidebar-divider">
         <!-- Nav Item - Payment -->
 
@@ -145,6 +161,13 @@
                                 Profile
                             </a>
                             @endcan
+                                @if(Auth::user()->hasRole('user'))
+                                <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user-injured fa-sm fa-fw mr-2 text-gray-400 text-danger"></i>
+                                        Delete account
+                                    </a>
+                                @endif
 
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
