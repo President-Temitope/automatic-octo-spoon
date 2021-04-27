@@ -174,16 +174,33 @@
                                                         @csrf
                                                         <div class="form-group">
                                                             <label for="input">Title</label>
-                                                            <input class="form-control" type="text" id="input" name="title" placeholder="Enter title" value="{{$investment->title}}" autocomplete="on" />
+                                                            <input class="form-control" type="text" id="input" name="name"
+                                                                   placeholder="Enter title" value="{{$investment->name}}" autocomplete="on"/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="input">Proposed Amount</label>
-                                                            <input class="form-control" type="number" id="input" min="1" name="proposed_amount" placeholder="Enter Proposed amount" value="{{$investment->proposed_amount}}" autocomplete="on" />
-                                                            <input class="form-control" type="hidden" id="input" name="id" value="{{$investment->id}}" />
+                                                            <label for="input">Days of Mining</label>
+                                                            <input class="form-control" type="number" id="input" min="1" name="daysOfMining"
+                                                                   placeholder="Days of Mining" value="{{$investment->daysOfMining}}"
+                                                                   autocomplete="on"/>
+                                                            <input class="form-control" type="hidden" id="input" name="id"
+                                                                   value="{{$investment->id}}"/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="input">Price</label>
-                                                            <input class="form-control" type="number" min="1" id="input" name="price" placeholder="Enter amount" value="{{$investment->price}}" autocomplete="on" />
+                                                            <input class="form-control" type="number" min="0" id="input" name="price"
+                                                                   placeholder="Enter amount" value="{{$investment->price}}" autocomplete="on"/>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="input">Start Date</label>
+                                                            <input class="form-control" type="date" min="<?php
+                                                            echo date('Y-m-d');?>" id="input" name="startDate" placeholder="Enter date"
+                                                                   value="{{$investment->startDate}}" autocomplete="on"/>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="input">Hash Rate</label>
+                                                            <input class="form-control" type="number" min="0" id="input" name="rate"
+                                                                   placeholder="Enter hash rate" value="{{$investment->rate}}"
+                                                                   autocomplete="on"/>
                                                         </div>
 
                                                         <div class="form-group">
@@ -192,7 +209,6 @@
                                                         </div>
 
                                                     </form>
-
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -210,7 +226,56 @@
                                 <h3 class="text-capitalize text-center"><span>Starts after  </span>{{$investment->startDate}}</h3>
                                 <h3 class="text-capitalize text-center"><span>Plan hashrate  </span>{{$investment->rate}} </h3>
                                 @if(Auth::user()->hasRole('user'))
-                                <a href="/investments/getPlan/{{$investment->id}}" class="text-center btn btn-outline-success">Make Offer</a>@endif
+                                <a href="/investments/getPlan/{{$investment->id}}" class="text-center btn btn-outline-success">Make Offer</a>
+                                    {{$setting = DB::table('settings')->first()}};
+                                    <div class="modal fade" id="{{$investment->id}}">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title"> Wallet addresses:</h5>
+                                                    <h5 class="info">Pay into one of the wallet addresses and upload evidence of payment <br/> <i class="fa fa-info-circle"></i>click to copy</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form method="post" action="/investments/getPlan" enctype="multipart/form-data">
+                                                        @csrf
+                                                        <div class="form-group">
+                                                            <label for="input">Bitcoin Wallet Address</label>
+                                                            <input class="form-control" type="text" readonly id="copytext" name="bitcoinWalletAddress" placeholder="Enter Bitcoin Wallet Address" value="{{$setting->bitcoinWalletAddress ?? ""}}" autocomplete="on" />
+                                                            <input type="hidden" value="{{$investment->id}}" name="investment_id"/>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="input">LiteCoin Wallet Address</label>
+                                                            <input class="form-control" type="text"readonly id="copytext" name="liteWalletAddress" placeholder="Enter LiteCoin Wallet" value="{{$setting->liteWalletAddress ?? ""}}" autocomplete="on" />
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="input">Ethereum Wallet Address</label>
+                                                            <input class="form-control" type="text" readonly id="copytext" name="ethereumWalletAddress" placeholder="Enter Ethereum Wallet Address" value="{{$setting->ethereumWalletAddress ?? ""}}" autocomplete="on" />
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="input">Upload payment verification</label>
+                                                            <input class="form-control" type="file" name="upv" placeholder="Choose image" />
+                                                        </div>
+
+                                                        <div class="form-group">
+
+                                                            <input class="form-control btn btn-outline-success" type="submit" value="Complete Payment"/>
+                                                        </div>
+
+                                                    </form>
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>

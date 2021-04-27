@@ -17,7 +17,7 @@ class AddMoreFieldToInvestmentsTable extends Migration
             $table->dropColumn(['title','proposed_amount']);
             $table->string('name');
             $table->integer('daysOfMining');
-            $table->integer('startDate');
+            $table->date('startDate');
             $table->string('rate');
 
         });

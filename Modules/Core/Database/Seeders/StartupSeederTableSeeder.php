@@ -5,6 +5,7 @@ namespace Modules\Core\Database\Seeders;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Modules\Investments\Entities\Investment;
 use Spatie\Permission\Models\Permission;
@@ -124,22 +125,28 @@ class StartupSeederTableSeeder extends Seeder
          * Investment seed runner
          */
         Investment::create([
-           'title' => 'Testing',
-           'price' => 1,
-           'proposed_amount' => 5
-        ],[
-           'title' => 'Testing 1',
-           'price' => 100,
-           'proposed_amount' => 500
-        ],[
-           'title' => 'Testing 2',
-           'price' => 1000,
-           'proposed_amount' => 50000
-        ],[
-           'title' => 'Testing 3',
-           'price' => 10000,
-           'proposed_amount' => 500000
-        ]);
+           'name' => 'Testing',
+           'daysOfMining' => 1,
+           'startDate' => 5,
+            'rate' => 5
+        ],
+            [
+                'name' => 'Testing1',
+                'daysOfMining' => 1,
+                'startDate' => 5,
+                'rate' => 50
+            ]
+        );
+
+        DB::table('settings')
+            ->insert(
+                [
+                    'id' => 1,
+                    'bitcoinWalletAddress'=> 'qwertyqwertyqwertyqwertyqwertyqwerty',
+                    'litecoinWalletAddress'=> 'qwertyqwertyqwertyqwertyqwertyqwerty',
+                    'ethereumWalletAddress'=> 'qwertyqwertyqwertyqwertyqwertyqwerty',
+                ]
+            );
     }
 
 

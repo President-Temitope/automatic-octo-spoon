@@ -3,12 +3,12 @@
 namespace Modules\Investments\Http\Controllers;
 
 use Carbon\Carbon;
-use Carbon\Traits\Date;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use Modules\Investments\Repositories\InvestmentsRepository;
 
 class InvestmentsController extends Controller
@@ -42,9 +42,10 @@ class InvestmentsController extends Controller
     public function store(Request $request)
     {
        $validator = Validator::make($request->all(),[
-            'title' => ['required','string'],
-            'price' => ['required','numeric'],
-            'proposed_amount' => ['required','numeric']
+            'name' => ['required','string'],
+            'daysOfMining' => ['required','numeric'],
+            'startDate' => ['required','date'],
+            'rate' => ['required','string']
         ]);
         if ($validator->failed()){
             return redirect()->back()->withErrors($validator);
@@ -64,9 +65,10 @@ class InvestmentsController extends Controller
     public function update(Request $request)
     {
       $validator =   Validator::make($request->all(),[
-          'title' => ['required','string'],
-          'price' => ['required','numeric'],
-          'proposed_amount' => ['required','numeric']
+          'name' => ['required','string'],
+          'daysOfMining' => ['required','numeric'],
+          'startDate' => ['required','date'],
+            'rate' => ['required','string']
         ]);
         if ($validator->failed()){
             return redirect()->back()->withErrors($validator);
@@ -100,18 +102,30 @@ class InvestmentsController extends Controller
     /**
      *getPlan method
      * This handles the purchase of plans by users
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function getPlan($id)
+    public function getPlan(Request $request)
     {
+        $file = $request->upv;
+        $validate = validator($file, ['file.*' => 'file|image|mimes:jpeg,png,jpg'], ['Invalid File detected']);
+        $path = 'payments' . DIRECTORY_SEPARATOR . DIRECTORY_SEPARATOR;
+        $destinationPath = public_path($path);
+        if (!$destinationPath) {
+            \Illuminate\Support\Facades\File::makeDirectory($destinationPath, 0777, true, true);
+        }
+        $filename = Auth::user()->fullName().Str::random(10).Carbon::now();
         DB::table('payments')
             ->insert(
                 [
                   'user_id' => auth()->id(),
-                  'investment_id' => $id,
+                  'investment_id' => $request->investment_id,
+                    'upv' => $filename,
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ]
             );
+        $validate->move($destinationPath, $filename);
         return redirect()->back()->with('success','Offer made successfully, await confirmation');
 
     }

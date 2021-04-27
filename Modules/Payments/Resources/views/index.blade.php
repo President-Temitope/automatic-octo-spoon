@@ -23,6 +23,7 @@
                             <th>Plan paid for</th>
                             <th>Date paid</th>
                             <th>Status of Payment</th>
+                            <th>Proof of Payment</th>
                             <th>Date Approved</th>
                             <th>Actions</th>
 
@@ -36,6 +37,7 @@
                             <th>Plan paid for</th>
                             <th>Date paid</th>
                             <th>Status of Payment</th>
+                            <th>Proof of Payment</th>
                             <th>Date Approved</th>
                             <th>Actions</th>
                         </tr>
@@ -46,9 +48,10 @@
                             @foreach($payments as $payment)
                                 <tr>
                                     <td>{{$payment->user->fullName()}}</td>
-                                    <td>{{$payment->investment->investmentName()}}</td>
+                                    <td>{{$payment->investment()->name}}</td>
                                     <td>{{$payment->created_at->diffForHumans() ?? ''}}</td>
                                     <td>{{$payment->status}}</td>
+                                    <td><a href="{{url()}}/payments/{{$payment->upv}}" target="_blank">view</a> </td>
                                     <td>{{$payment->updated_at->diffForHumans()}}</td>
 
                                     <td>

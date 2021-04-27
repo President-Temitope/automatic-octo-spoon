@@ -246,6 +246,16 @@
     <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>
 </div>
+<script>
+
+    function ClipBoard()
+    {
+        holdtext.innerText = copytext.innerText;
+        Copied = holdtext.createTextRange();
+        Copied.execCommand("Copy");
+    }
+
+</script>
 <!-- Wrapper Ends -->
 <script src="//code.jivosite.com/widget/a8wNYWI9B3" async></script>
 </body>

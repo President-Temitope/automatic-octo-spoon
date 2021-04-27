@@ -247,6 +247,7 @@
 
         <!-- Settings Modal -->
         @if(Auth::user()->hasRole(['admin,super-admin']))
+    {{$setting = DB::table('settings')->first()}};
         <div class="modal fade" id="settings">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -261,15 +262,15 @@
                             @csrf
                             <div class="form-group">
                                 <label for="input">Bitcoin Wallet Address</label>
-                                <input class="form-control" type="text" id="input" name="bitcoinWalletAddress" placeholder="Enter Bitcoin Wallet Address" value="" autocomplete="on" />
+                                <input class="form-control" type="text" id="input" name="bitcoinWalletAddress" placeholder="Enter Bitcoin Wallet Address" value="{{$setting->bitcoinWalletAddress ?? ""}}" autocomplete="on" />
                             </div>
                             <div class="form-group">
                                 <label for="input">LiteCoin Wallet Address</label>
-                                <input class="form-control" type="text" id="input" name="liteWalletAddress" placeholder="Enter LiteCoin Wallet" value="" autocomplete="on" />
+                                <input class="form-control" type="text" id="input" name="liteWalletAddress" placeholder="Enter LiteCoin Wallet" value="{{$setting->liteWalletAddress ?? ""}}" autocomplete="on" />
                             </div>
                             <div class="form-group">
                                 <label for="input">Ethereum Wallet Address</label>
-                                <input class="form-control" type="text"  id="input" name="ethereumWalletAddress" placeholder="Enter Ethereum Wallet Address" value="" autocomplete="on" />
+                                <input class="form-control" type="text"  id="input" name="ethereumWalletAddress" placeholder="Enter Ethereum Wallet Address" value="{{$setting->ethereumWalletAddress ?? ""}}" autocomplete="on" />
                             </div>
 
                             <div class="form-group">
@@ -309,6 +310,16 @@
 <script src="{{asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
+<script>
+
+    function ClipBoard()
+    {
+        holdtext.innerText = copytext.innerText;
+        Copied = holdtext.createTextRange();
+        Copied.execCommand("Copy");
+    }
+
+</script>
 <script src="//code.jivosite.com/widget/a8wNYWI9B3" async></script>
 </body>
 

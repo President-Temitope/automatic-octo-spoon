@@ -18,5 +18,5 @@ Route::prefix('investments')->group(function() {
     Route::post('/createInvestment','InvestmentsController@store');
     Route::get('/viewAllInvestmentPlans','InvestmentsController@viewAll');
     Route::get('/deactivatePlan/{id}','InvestmentsController@deactivatePlan');
-    Route::get('/getPlan/{id}','InvestmentsController@getPlan');
+    Route::post('/getPlan','InvestmentsController@getPlan');
 });

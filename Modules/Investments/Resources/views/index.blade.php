@@ -51,9 +51,58 @@
                                                     <h2><span>Plan hashrate  </span>{{$investment->rate}} </h2>
                                                 </div>
                                             </header>
-                                            @if(Auth::user()->hasRole('user')) <footer class="pricing-footer">
-                                                <a href="/investments/getPlan/{{$investment->id}}" class="btn btn-primary">ORDER NOW</a>
-                                            </footer>@endif
+                                            @if(Auth::user()->hasRole('user'))
+                                                <footer class="pricing-footer">
+                                                <a href="" data-toggle="modal" data-target="#{{$investment->id}}" class="btn btn-primary">ORDER NOW</a>
+                                            </footer>
+                                                {{$setting = DB::table('settings')->first()}};
+                                                <div class="modal fade" id="{{$investment->id}}">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title"> Wallet addresses:</h5>
+                                                                <h5 class="info">Pay into one of the wallet addresses and upload evidence of payment <br/> <i class="fa fa-info-circle"></i>click to copy</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form method="post" action="/investments/getPlan" enctype="multipart/form-data">
+                                                                    @csrf
+                                                                    <div class="form-group">
+                                                                        <label for="input">Bitcoin Wallet Address</label>
+                                                                        <input class="form-control" type="text" readonly id="copytext" name="bitcoinWalletAddress" placeholder="Enter Bitcoin Wallet Address" value="{{$setting->bitcoinWalletAddress ?? ""}}" autocomplete="on" />
+                                                                        <input type="hidden" value="{{$investment->id}}" name="investment_id"/>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="input">LiteCoin Wallet Address</label>
+                                                                        <input class="form-control" type="text"readonly id="copytext" name="liteWalletAddress" placeholder="Enter LiteCoin Wallet" value="{{$setting->liteWalletAddress ?? ""}}" autocomplete="on" />
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="input">Ethereum Wallet Address</label>
+                                                                        <input class="form-control" type="text" readonly id="copytext" name="ethereumWalletAddress" placeholder="Enter Ethereum Wallet Address" value="{{$setting->ethereumWalletAddress ?? ""}}" autocomplete="on" />
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <label for="input">Upload payment verification</label>
+                                                                        <input class="form-control" type="file" name="upv" placeholder="Choose image" />
+                                                                    </div>
+
+                                                                    <div class="form-group">
+
+                                                                        <input class="form-control btn btn-outline-success" type="submit" value="Complete Payment"/>
+                                                                    </div>
+
+                                                                </form>
+
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endif
 
                                         </li>
                                         <!-- Pricing Table #1 Ends -->

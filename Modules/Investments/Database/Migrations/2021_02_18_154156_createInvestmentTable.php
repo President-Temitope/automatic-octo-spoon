@@ -19,7 +19,7 @@ class CreateInvestmentTable extends Migration
             $table->string('title');
             $table->float('price');
             $table->float('proposed_amount');
-            $table->boolean('status')->default(true);
+            $table->enum('status',['inactive','active'])->default('active');
             $table->timestamps();
         });
     }
