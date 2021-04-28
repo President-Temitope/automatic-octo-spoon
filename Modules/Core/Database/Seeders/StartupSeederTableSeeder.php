@@ -127,14 +127,16 @@ class StartupSeederTableSeeder extends Seeder
         Investment::create([
            'name' => 'Testing',
            'daysOfMining' => 1,
-           'startDate' => 5,
-            'rate' => 5
+           'startDate' => '2021-04-28',
+            'rate' => 5,
+            'price' => 1000
         ],
             [
                 'name' => 'Testing1',
                 'daysOfMining' => 1,
-                'startDate' => 5,
-                'rate' => 50
+                'startDate' => '2021-04-28',
+                'rate' => 50,
+                'price' => 15550
             ]
         );
 
