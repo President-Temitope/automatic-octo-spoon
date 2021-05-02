@@ -310,8 +310,8 @@
                                         </header>
                                         @if(Auth::user()->hasRole('user'))
                                         <footer class="pricing-footer">
-                                            <a href="#" data-toggle="modal" data-target="#{{$investment->id}}" class="btn btn-primary">START PLAN</a>
-                                            <div class="modal fade" id="{{$investment->id}}">
+                                            <a href="#" data-toggle="modal" data-target="#{{Str::slug($investment->name)}}" class="btn btn-primary">START PLAN</a>
+                                            <div class="modal fade" id="#{{Str::slug($investment->name)}}">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
