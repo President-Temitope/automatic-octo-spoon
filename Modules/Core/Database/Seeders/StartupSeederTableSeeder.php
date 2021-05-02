@@ -124,7 +124,8 @@ class StartupSeederTableSeeder extends Seeder
         /**
          * Investment seed runner
          */
-        Investment::create([
+        Investment::create(
+            [
            'name' => 'Testing',
            'daysOfMining' => 1,
            'startDate' => '2021-04-28',
