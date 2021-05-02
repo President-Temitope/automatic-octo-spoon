@@ -265,7 +265,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="input">LiteCoin Wallet Address</label>
-                                <input class="form-control" type="text" id="input" name="liteWalletAddress" placeholder="Enter LiteCoin Wallet" value="{{$setting->liteWalletAddress ?? ""}}" autocomplete="on" />
+                                <input class="form-control" type="text" id="input" name="litecoinWalletAddress" placeholder="Enter LiteCoin Wallet" value="{{$setting->litecoinWalletAddress ?? ""}}" autocomplete="on" />
                             </div>
                             <div class="form-group">
                                 <label for="input">Ethereum Wallet Address</label>

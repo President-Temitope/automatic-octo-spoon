@@ -5,7 +5,7 @@
         @include('core::table',[
         $title = 'Investment Table',
         $description = 'Manage all investments activities',
-        $fieldlists = ['id','title','price','proposed_amount','status'],
+        $fieldlists = ['id','name','price','daysOfMining','startDate','rate','status'],
         $modeldata = $investments,
         $addButton = 'data-toggle="modal" data-target="#addInvestment"',
         $editButton = 'data-toggle="modal" data-target=',

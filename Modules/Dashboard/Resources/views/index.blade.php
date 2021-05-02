@@ -247,7 +247,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="input">LiteCoin Wallet Address</label>
-                                                            <input class="form-control" type="text"readonly id="copytext" name="liteWalletAddress" placeholder="Enter LiteCoin Wallet" value="{{$setting->liteWalletAddress ?? ""}}" autocomplete="on" />
+                                                            <input class="form-control" type="text"readonly id="copytext" name="litecoinWalletAddress" placeholder="Enter LiteCoin Wallet" value="{{$setting->litecoinWalletAddress ?? ""}}" autocomplete="on" />
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="input">Ethereum Wallet Address</label>
@@ -256,7 +256,7 @@
 
                                                         <div class="form-group">
                                                             <label for="input">Upload payment verification</label>
-                                                            <input class="form-control" type="file" name="upv" placeholder="Choose image" />
+                                                            <input class="form-control" type="file" name="file" placeholder="Choose image" />
                                                         </div>
 
                                                         <div class="form-group">

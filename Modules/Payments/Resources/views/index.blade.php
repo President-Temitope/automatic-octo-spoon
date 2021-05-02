@@ -51,7 +51,7 @@
                                     <td>{{$payment->investment()->name}}</td>
                                     <td>{{$payment->created_at->diffForHumans() ?? ''}}</td>
                                     <td>{{$payment->status}}</td>
-                                    <td><a href="{{url()}}/payments/{{$payment->upv}}" target="_blank">view</a> </td>
+                                    <td><a href="{{url()}}/payments/{{$payment->file}}" target="_blank">view</a> </td>
                                     <td>{{$payment->updated_at->diffForHumans()}}</td>
 
                                     <td>

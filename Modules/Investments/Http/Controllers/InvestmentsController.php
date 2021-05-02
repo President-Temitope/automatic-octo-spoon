@@ -107,8 +107,7 @@ class InvestmentsController extends Controller
      */
     public function getPlan(Request $request)
     {
-        $file = $request->upv;
-        $validate = validator($file, ['file.*' => 'file|image|mimes:jpeg,png,jpg'], ['Invalid File detected']);
+        $validate = validator($request, ['file.*' => 'file|image|mimes:jpeg,png,jpg'], ['Invalid File detected']);
         $path = 'payments' . DIRECTORY_SEPARATOR . DIRECTORY_SEPARATOR;
         $destinationPath = public_path($path);
         if (!$destinationPath) {
@@ -120,7 +119,7 @@ class InvestmentsController extends Controller
                 [
                   'user_id' => auth()->id(),
                   'investment_id' => $request->investment_id,
-                    'upv' => $filename,
+                    'file' => $filename,
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ]
