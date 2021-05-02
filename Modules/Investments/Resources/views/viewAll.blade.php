@@ -94,8 +94,8 @@
                                     <input class="form-control" type="number" id="input" min="1" name="daysOfMining"
                                            placeholder="Days of Mining" value="{{$investment->daysOfMining}}"
                                            autocomplete="on"/>
-                                    <input class="form-control" type="hidden" id="input" name="id"
-                                           value="{{$investment->id}}"/>
+{{--                                    <input class="form-control" type="hidden" id="input" name="id"--}}
+{{--                                           value="{{$investment->id}}"/>--}}
                                 </div>
                                 <div class="form-group">
                                     <label for="input">Price</label>
