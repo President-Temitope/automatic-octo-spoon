@@ -258,6 +258,8 @@
 </script>
 <!-- Wrapper Ends -->
 <script src="//code.jivosite.com/widget/a8wNYWI9B3" async></script>
+
+@stack('page-script')
 </body>
 
 </html>

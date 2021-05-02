@@ -19,7 +19,7 @@ class CreatePaymentTable extends Migration
             $table->integer('investment_id');
             $table->integer('user_id');
             $table->enum('status',['Approved','Pending'])->default('Pending');
-            $table->string('upv');
+            $table->string('file');
             $table->timestamps();
         });
     }
