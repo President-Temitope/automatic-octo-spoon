@@ -226,8 +226,7 @@
                                 <h3 class="text-capitalize text-center"><span>Starts after  </span>{{$investment->startDate}}</h3>
                                 <h3 class="text-capitalize text-center"><span>Plan hashrate  </span>{{$investment->rate}} </h3>
                                 @if(Auth::user()->hasRole('user'))
-                                <a href="/investments/getPlan/{{$investment->id}}" class="text-center btn btn-outline-success">Make Offer</a>
-                                    {{$setting = DB::table('settings')->first()}};
+                                <a href="#" data-toggle="modal" data-target="#{{$investment->id}}" class="text-center btn btn-outline-success">Make Offer</a>
                                     <div class="modal fade" id="{{$investment->id}}">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">

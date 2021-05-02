@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>{{config('app.name')}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('images/Asset 16@4x.png')}}">
 
@@ -144,8 +144,8 @@
                         <h4>Help & Support</h4>
                         <div class="menu">
                             <ul>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="terms-of-services.html">Terms of Services</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Terms of Services</a></li>
                                 <li><a href="{{route('register')}}">Register</a></li>
                                 <li><a href="{{route('login')}}">Login</a></li>
                             </ul>

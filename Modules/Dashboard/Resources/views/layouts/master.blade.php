@@ -247,7 +247,6 @@
 
         <!-- Settings Modal -->
         @if(Auth::user()->hasRole(['admin,super-admin']))
-    {{$setting = DB::table('settings')->first()}};
         <div class="modal fade" id="settings">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Modules\Investments\Repositories\InvestmentsRepository;
 
 
 class SiteController extends Controller
 {
-    protected $investment ='';
+    protected $investment = '';
+
     public function __construct(InvestmentsRepository $investmentsRepository)
     {
         $this->investment = $investmentsRepository;
@@ -19,14 +20,19 @@ class SiteController extends Controller
      */
     public function index()
     {
+        $setting = DB::table('settings')->first();
         $investments = $this->investment->queryWithStatus();
-        return view('index')->with('investments',$investments);
+        return view('index')->with('investments', $investments)
+            ->with('setting', $setting);
     }
 
-    public function about(){
+    public function about()
+    {
         return view('about');
     }
-    public function contact(){
+
+    public function contact()
+    {
         return view('contact');
     }
 

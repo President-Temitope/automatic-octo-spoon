@@ -5,6 +5,7 @@ namespace Modules\Dashboard\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 use Modules\Investments\Repositories\InvestmentsRepository;
 
 class DashboardController extends Controller
@@ -26,8 +27,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $setting = DB::table('settings')->first();
         $investments = $this->investment->queryWithStatus();
-        return view('dashboard::index')->with('investments',$investments);
+        return view('dashboard::index')
+            ->with('investments', $investments)
+            ->with('setting', $setting);
     }
 
     /**
