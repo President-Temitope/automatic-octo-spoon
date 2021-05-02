@@ -7,6 +7,7 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Modules\Investments\Repositories\InvestmentsRepository;
@@ -126,6 +127,14 @@ class InvestmentsController extends Controller
             );
         $validate->move($destinationPath, $filename);
         return redirect()->back()->with('success','Offer made successfully, await confirmation');
+
+    }
+
+    public function btclog(){
+
+        $response = Http::get('https://api.blockcypher.com/v1/btc/main/txs');
+
+        dd($response);
 
     }
 

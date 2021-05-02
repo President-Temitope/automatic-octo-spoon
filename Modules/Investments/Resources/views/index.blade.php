@@ -55,7 +55,7 @@
                                                 <footer class="pricing-footer">
                                                 <a href="" data-toggle="modal" data-target="#{{$investment->id}}" class="btn btn-primary">ORDER NOW</a>
                                             </footer>
-                                                {{$setting = DB::table('settings')->first()}};
+{{--                                                {{$setting = DB::table('settings')->first()}};--}}
                                                 <div class="modal fade" id="{{$investment->id}}">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
