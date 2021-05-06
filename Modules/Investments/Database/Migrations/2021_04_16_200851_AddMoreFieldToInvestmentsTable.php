@@ -19,6 +19,7 @@ class AddMoreFieldToInvestmentsTable extends Migration
             $table->integer('daysOfMining');
             $table->date('startDate');
             $table->string('rate');
+            $table->string('info');
 
         });
     }

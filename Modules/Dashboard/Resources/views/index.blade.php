@@ -204,6 +204,13 @@
                                                         </div>
 
                                                         <div class="form-group">
+                                                            <label for="input">Info</label>
+                                                            <input class="form-control" type="text" id="input" name="info"
+                                                                   placeholder="Enter info here" value="{{$investment->info}}"
+                                                                   autocomplete="on"/>
+                                                        </div>
+
+                                                        <div class="form-group">
 
                                                             <input class="form-control btn btn-outline-success" type="submit"/>
                                                         </div>
@@ -225,6 +232,7 @@
                                 <h3 class="text-capitalize text-center">{{$investment->daysOfMining}} <span>Days of mining </span></h3>
                                 <h3 class="text-capitalize text-center"><span>Starts after  </span>{{$investment->startDate}}</h3>
                                 <h3 class="text-capitalize text-center"><span>Plan hashrate  </span>{{$investment->rate}} </h3>
+                                <h3 class="text-capitalize text-center"><span>Info  </span>{{$investment->info}} </h3>
                                 @if(Auth::user()->hasRole('user'))
                                 <a href="#" data-toggle="modal" data-target="#{{Str::slug($investment->name)}}" class="text-center btn btn-outline-success">Make Offer</a>
                                     <div class="modal fade" id="{{Str::slug($investment->name)}}">

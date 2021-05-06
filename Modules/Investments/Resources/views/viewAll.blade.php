@@ -27,29 +27,36 @@
                             <div class="form-group">
                                 <label for="input">Title</label>
                                 <input class="form-control" type="text" id="input" name="name"
-                                       placeholder="Enter title"  autocomplete="on"/>
+                                       placeholder="Enter title" autocomplete="on"/>
                             </div>
                             <div class="form-group">
                                 <label for="input">Days of Mining</label>
                                 <input class="form-control" type="number" id="input" min="1" name="daysOfMining"
                                        placeholder="Days of Mining"
                                        autocomplete="on"/>
-                                   </div>
+                            </div>
                             <div class="form-group">
                                 <label for="input">Price</label>
                                 <input class="form-control" type="number" min="0" id="input" name="price"
-                                       placeholder="Enter amount"  autocomplete="on"/>
+                                       placeholder="Enter amount" autocomplete="on"/>
                             </div>
                             <div class="form-group">
                                 <label for="input">Start Date</label>
                                 <input class="form-control" type="date" min="<?php
                                 echo date('Y-m-d');?>" id="input" name="startDate" placeholder="Enter date"
-                                        autocomplete="on"/>
+                                       autocomplete="on"/>
                             </div>
                             <div class="form-group">
                                 <label for="input">Hash Rate</label>
                                 <input class="form-control" type="number" min="0" id="input" name="rate"
                                        placeholder="Enter hash rate"
+                                       autocomplete="on"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input">Info</label>
+                                <input class="form-control" type="text" id="input" name="info"
+                                       placeholder="Enter info here"
                                        autocomplete="on"/>
                             </div>
 
@@ -110,6 +117,12 @@
                                     <label for="input">Hash Rate</label>
                                     <input class="form-control" type="number" min="0" id="input" name="rate"
                                            placeholder="Enter hash rate" value="{{$investment->rate}}"
+                                           autocomplete="on"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="input">Info</label>
+                                    <input class="form-control" type="text" id="input" name="info"
+                                           placeholder="Enter info here" value="{{$investment->info}}"
                                            autocomplete="on"/>
                                 </div>
 

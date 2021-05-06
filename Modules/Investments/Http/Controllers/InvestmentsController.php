@@ -46,7 +46,8 @@ class InvestmentsController extends Controller
             'name' => ['required','string'],
             'daysOfMining' => ['required','numeric'],
             'startDate' => ['required','date'],
-            'rate' => ['required','string']
+            'rate' => ['required','string'],
+           'info' => ['required','string']
         ]);
         if ($validator->failed()){
             return redirect()->back()->withErrors($validator);
@@ -69,7 +70,8 @@ class InvestmentsController extends Controller
           'name' => ['required','string'],
           'daysOfMining' => ['required','numeric'],
           'startDate' => ['required','date'],
-            'rate' => ['required','string']
+            'rate' => ['required','string'],
+          'info' => ['required','string']
         ]);
         if ($validator->failed()){
             return redirect()->back()->withErrors($validator);

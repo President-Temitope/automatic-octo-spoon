@@ -130,14 +130,16 @@ class StartupSeederTableSeeder extends Seeder
            'daysOfMining' => 1,
            'startDate' => '2021-04-28',
             'rate' => 5,
-            'price' => 1000
+            'price' => 1000,
+                'info' => 'Testing Info'
         ],
             [
                 'name' => 'Testing1',
                 'daysOfMining' => 1,
                 'startDate' => '2021-04-28',
                 'rate' => 50,
-                'price' => 15550
+                'price' => 15550,
+                'info' => 'Testing Info'
             ]
         );
 
