@@ -150,7 +150,7 @@
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
                             @can('edit setting')
-                            <a class="dropdown-item" data-toggle="modal" data-target="#settings">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#settings">
                                 <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Settings
                             </a>
