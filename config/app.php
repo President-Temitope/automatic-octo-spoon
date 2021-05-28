@@ -167,6 +167,8 @@ return [
          */
         Spatie\Permission\PermissionServiceProvider::class,
         Laravolt\Avatar\ServiceProvider::class,
+        \Questocat\Referral\ReferralServiceProvider::class,
+
 
 
         /*

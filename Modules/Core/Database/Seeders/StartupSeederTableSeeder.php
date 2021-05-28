@@ -37,6 +37,7 @@ class StartupSeederTableSeeder extends Seeder
         Permission::create(['name' => 'add user']);
         Permission::create(['name' => 'view user']);
         Permission::create(['name' => 'delete user']);
+        Permission::create(['name' => 'view referral']);
 
         Permission::create(['name' => 'edit payment']);
         Permission::create(['name' => 'add payment']);
@@ -124,15 +125,15 @@ class StartupSeederTableSeeder extends Seeder
         /**
          * Investment seed runner
          */
-        Investment::create(
+        $items = [
             [
-           'name' => 'Testing',
-           'daysOfMining' => 1,
-           'startDate' => '2021-04-28',
-            'rate' => 5,
-            'price' => 1000,
+                'name' => 'Testing',
+                'daysOfMining' => 1,
+                'startDate' => '2021-04-28',
+                'rate' => 5,
+                'price' => 1000,
                 'info' => 'Testing Info'
-        ],
+            ],
             [
                 'name' => 'Testing1',
                 'daysOfMining' => 1,
@@ -141,15 +142,19 @@ class StartupSeederTableSeeder extends Seeder
                 'price' => 15550,
                 'info' => 'Testing Info'
             ]
-        );
+        ];
+        foreach ($items as $item)
+            Investment::create(
+                $item
+            );
 
         DB::table('settings')
             ->insert(
                 [
                     'id' => 1,
-                    'bitcoinWalletAddress'=> 'qwertyqwertyqwertyqwertyqwertyqwerty',
-                    'litecoinWalletAddress'=> 'qwertyqwertyqwertyqwertyqwertyqwerty',
-                    'ethereumWalletAddress'=> 'qwertyqwertyqwertyqwertyqwertyqwerty',
+                    'bitcoinWalletAddress' => 'qwertyqwertyqwertyqwertyqwertyqwerty',
+                    'litecoinWalletAddress' => 'qwertyqwertyqwertyqwertyqwertyqwerty',
+                    'ethereumWalletAddress' => 'qwertyqwertyqwertyqwertyqwertyqwerty',
                 ]
             );
     }

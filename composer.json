@@ -18,6 +18,7 @@
         "laravolt/avatar": "^4.0",
         "murich/php-cryptocurrency-address-validation": "9999999-dev",
         "nwidart/laravel-modules": "^8.0",
+        "questocat/laravel-referral": "^1.0",
         "spatie/laravel-permission": "^3.18"
     },
     "require-dev": {

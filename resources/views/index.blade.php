@@ -306,6 +306,7 @@
                                                 <h2>{{$investment->daysOfMining}} <span>Days of mining </span></h2>
                                                 <h2><span>Starts after  </span>{{$investment->startDate}} </h2>
                                                 <h2><span>Plan hashrate  </span>{{$investment->rate}} </h2>
+                                                <h2 class="info">{{$investment->info}} </h2>
                                             </div>
                                         </header>
                                         @if(Auth::user()->hasRole('user'))

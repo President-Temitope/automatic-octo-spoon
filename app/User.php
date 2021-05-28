@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Modules\Payments\Entities\Payment;
+use Questocat\Referral\Traits\UserReferral;
 use Spatie\Permission\Traits\HasRoles;
 
 
@@ -13,6 +14,7 @@ class User extends Authenticatable
 {
     use Notifiable;
     use HasRoles;
+    use UserReferral;
 
     /**
      * The attributes that are mass assignable.
